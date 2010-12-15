@@ -1,0 +1,322 @@
+<window id="0">
+  <defaultcontrol always="true">300</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+
+  <controls>
+
+<!-- BACKGROUND MEDIA -------------------------------------------------------------------------------------------------------------------------->
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<texture background="true">backgrounds/background.png</texture>
+
+			<animation type="WindowOpen" condition="Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="2000" delay="100" />
+			</animation>
+		</control>
+
+		<control type="multiimage">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<imagepath>backgrounds/Morning</imagepath>
+			<timeperimage>7000</timeperimage>
+			<fadetime>850</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<animation type="WindowOpen" condition="Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="2000" delay="100" />
+			</animation>
+			<visible>Skin.HasSetting(hometimebackgrounds) + system.time(00:00,12:00)</visible>
+		</control>
+
+		<control type="multiimage">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<imagepath>backgrounds/afternoon</imagepath>
+			<timeperimage>7000</timeperimage>
+			<fadetime>850</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<animation type="WindowOpen" condition="Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="2000" delay="100" />
+			</animation>
+			<visible>Skin.HasSetting(hometimebackgrounds) + system.time(12:00,18:00)</visible>
+		</control>
+
+		<control type="multiimage">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<imagepath>backgrounds/Evening</imagepath>
+			<timeperimage>7000</timeperimage>
+			<fadetime>850</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<animation type="WindowOpen" condition="Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="2000" delay="100" />
+			</animation>
+			<visible>Skin.HasSetting(hometimebackgrounds) + system.time(18:00,00:00)</visible>
+		</control>
+	
+		<include>slideshows</include>
+
+		<include condition="!Skin.HasSetting(plex)">bluethemeoverlay</include>
+
+		<include condition="Skin.HasSetting(plex)">plexthemeoverlay</include>
+
+
+		<control type="videowindow">
+			<include>screentype</include>
+			<visible>!Skin.HasSetting(backgroundVideo) + !Window.IsActive(28)</visible>
+		</control>
+
+		<control type="multiimage" id="1">
+			<include>screentype</include>
+			<aspectratio>scale</aspectratio>
+			<imagepath background="true">$INFO[Skin.String(weatherFanartPath)]/$INFO[Weather.FanartCode]</imagepath>
+			<timeperimage>7000</timeperimage>
+			<fadetime>850</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<include>fadeinout</include>
+			<visible allowhiddenfocus="true">Container(300).HasFocus(6) + Skin.HasSetting(weatherFanart)</visible>
+		</control>
+		<control type="largeimage">
+			<include>screentype</include>
+			<aspectratio>scale</aspectratio>
+			<texture>$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+			<fadetime>850</fadetime>
+			<visible allowhiddenfocus="true">Container(300).HasFocus(12) + Skin.HasSetting(homemenuNP)</visible>
+			<include>fadeinout</include>
+		</control>
+		<control type="largeimage">
+			<include>screentype</include>
+			<aspectratio>scale</aspectratio>
+			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<fadetime>1400</fadetime>
+			<include>fadeinout</include>
+		</control>
+		<control type="image">
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio align="left">stretch</aspectratio>
+			<texture>home/menuBackground.png</texture>
+		</control>
+		<!--control type="image">
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio align="right">stretch</aspectratio>
+			<texture>home/menuBackground2.png</texture>
+		</control-->
+		<control type="image" id="1">
+			<include>screentype</include>
+			<texture>home/homeOverlay.png</texture>
+			<include>fadeinout</include>
+			<visible>Window.IsActive(133) | Window.IsActive(112)</visible>
+		</control>
+		<control type="image" id="1">
+			<include>screentype</include>
+			<texture>home/homeOverlay.png</texture>
+			<include>fadeinout</include>
+			<visible>Window.IsActive(133) | Window.IsActive(112) | Window.IsActive(107)</visible>
+		</control>
+
+
+<!-- TIME -------------------------------------------------------------------------------------------------------------------------->
+	<include condition="!Skin.HasSetting(homeTime) + ![Window.IsActive(10112) | Window.IsActive(10133) | Window.IsActive(107)]">libClock</include>
+		
+		
+<!-- CALL MENU -------------------------------------------------------------------------------------------------------------------------->
+	<include condition="!Skin.HasSetting(originalhome)">HomeMenu</include>
+	<include condition="Skin.HasSetting(originalhome)">HomeMenu_Original</include>
+
+	<!--<control type="group" id="888">
+		<posx>365</posx>
+		<posy>235</posy>
+		<visible>Window.IsActive(home) + system.getbool(input.enablemouse) + !Control.HasFocus(300) + !Skin.HasSetting(mouseAgree)</visible>
+		<include>dialogOpen</include>
+		<control type="image">
+			<width>550</width>
+			<height>250</height>
+			<include>dialogWindow</include>
+		</control>
+		<control type="label" id="1">
+			<description>heading label</description>
+			<width>482</width>
+			<label>No Mouse Support</label>
+			<include>dialogHeading</include>
+		</control>
+		<control type="label" id="3">
+			<description>dialog line 2</description>
+			<posy>90</posy>
+			<width>482</width>
+			<label>reFocus does not offer mouse support</label>
+			<include>dialogLine</include>
+		</control>
+		<control type="label" id="4">
+			<description>dialog line 3</description>
+			<posy>115</posy>
+			<width>482</width>
+			<label>please disable mouse input in input devices settings</label>
+			<include>dialogLine</include>
+		</control>
+		
+		<control type="group">
+			<posx>110</posx>
+			<posy>174</posy>
+			<control type="button" id="999">
+				<label>Take me there</label>
+				<width>160</width>
+				<include>dialogConfirmButton</include>
+				<onclick>ReplaceWindow(systemsettings)</onclick>
+				<onclick>Skin.SetBool(mouseAgree)</onclick>
+				<onleft>998</onleft>
+				<onright>998</onright>
+			</control>
+			<control type="button" id="998">
+				<posx>170</posx>
+				<width>160</width>
+				<label>Leave me alone</label>
+				<onleft>999</onleft>
+				<onright>999</onright>
+				<include>dialogConfirmButton</include>
+				<onclick>SetFocus(300)</onclick>
+				<onclick>Skin.SetBool(mouseAgree)</onclick>
+			</control>
+		</control>
+	</control>
+	
+	<control type="group" id="888">
+		<posx>110</posx>
+		<posy>474</posy>
+		<visible>Window.IsActive(home) + !system.getbool(input.enablemouse) + !Control.HasFocus(300) + !Skin.HasSetting(mouseAgree)</visible>
+		<control type="button" id="999">
+			<label>Take me there</label>
+			<width>160</width>
+			<include>dialogConfirmButton</include>
+			<onfocus>SetFocus(300)</onfocus>
+			<onclick>Skin.SetBool(mouseAgree)</onclick>
+			<onleft>998</onleft>
+			<onright>998</onright>
+		</control>
+	</control>
+	
+	<control type="button" id="999">
+		<posx>110</posx>
+		<posy>600</posy>
+		<label>reset</label>
+		<posy>100</posy>
+		<width>160</width>
+		<include>dialogConfirmButton</include>
+		<onclick>Skin.ToggleSetting(mouseAgree)</onclick>
+		<onleft>998</onleft>
+		<onright>998</onright>
+	</control>-->
+
+	<!-- Arrows -->
+
+	<!--control type="image">
+		<include>transition2</include>
+		<animation type="WindowOpen" condition="Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="2000" delay="100" />
+			</animation>
+		<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
+		<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="300" />
+			</animation>
+		<posx>350</posx>
+		<posy>320</posy>
+		<width>50</width>
+		<height>50</height>
+		<texture>views/scrollleftindicator.png</texture>
+		<visible>Control.HasFocus(300)</visible>
+	</control>
+
+	<control type="image">
+		<include>transition2</include>
+		<animation type="WindowOpen" condition="Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="2000" delay="100" />
+			</animation>
+		<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
+		<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="300" />
+			</animation>
+		<posx>350</posx>
+		<posy>320</posy>
+		<width>50</width>
+		<height>50</height>
+		<texture>views/scrollrightindicator.png</texture>
+		<visible>Control.HasFocus(9000)</visible>
+	</control-->
+
+	<!-- Plex Logo -->
+	
+	<control type="group">
+		<visible>![Skin.HasSetting(originalhome) | Skin.HasSetting(plexhomelogo)]</visible>
+
+	<control type="image">
+			<posx>30</posx>
+			<posy>30</posy>
+			<width>224</width>
+			<texture>logos/refocuslogo.png</texture>
+			<aspectratio align="right">keep</aspectratio>
+			<include>transition2</include>
+		</control>
+
+		<control type="image">
+			<posx>60</posx>
+			<posy>60</posy>
+			<width>193</width>
+			<height>70</height>
+			<texture>home/forplexlogo.png</texture>
+			<aspectratio align="right">keep</aspectratio>
+			<include>transition2</include>
+		</control>
+	</control>
+	
+	<!--control type="image">
+		<include>transition2</include>
+		<animation type="WindowOpen" condition="Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="2000" delay="100" />
+			</animation>
+		<posx>20</posx>
+		<posy>0</posy>
+		<width>245</width>
+		<height>145</height>
+		<texture>home/logo.png</texture>
+	</control-->
+
+	<!-- RSS FEED -------------------------------------------------------------------------------------------------------------------------->
+		<control type="group">
+			<posy>685</posy>
+			<visible>!Skin.HasSetting(enableRSSFeed) + ![Window.IsActive(10133) | Window.IsActive(10112)]</visible>
+			<animation effect="slide" start="0,100" end="0,0" time="200" tween="Quadratic" easing="In">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,100" time="200" tween="Quadratic" easing="Out">WindowClose</animation>
+
+			<control type="image">
+				<height>38</height>
+				<texture border="9">home/rssBackground.png</texture>
+				<include>screenwidth</include>
+				<visible>!Skin.HasSetting(enableRSSFeed)</visible>
+			</control>	
+			<control type="rss" id="1">
+				<posy>1</posy>
+				<include>screenwidth</include>
+				<font>normalLow</font>
+				<urlset>1</urlset>
+				<height>32</height>
+				<aligny>center</aligny>
+				<textcolor>Color1</textcolor>
+				<titlecolor>Color2</titlecolor>
+				<headlinecolor>Color1</headlinecolor>
+				<highlightcolor>Focused</highlightcolor>
+				<include>fadeinout</include>
+			</control>
+		</control>
+	
+		
+  </controls>
+</window>

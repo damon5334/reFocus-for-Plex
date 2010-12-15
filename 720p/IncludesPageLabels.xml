@@ -1,0 +1,101 @@
+<includes>
+	
+	<include name="PagelLabelex">	
+		<posx>19</posx>
+		<posy>10</posy>
+		<width>400</width>
+		<aligny>center</aligny>
+		<font>pageLabelSmall</font>
+		<textcolor>Color4</textcolor>
+		<visible>!Window.IsActive(136) | !Control.IsVisible(56)</visible>
+		<include>fadeinout</include>
+	</include>
+	<include name="pageSubLabel">	
+		<posx>30</posx>
+		<posy>42</posy>
+		<width>740</width>
+		<align>left</align>
+		<height>40</height>
+		<aligny>center</aligny>
+		<visible>!Window.IsActive(136)</visible>
+		<include>fadeinout</include>
+		<textcolor>Color5</textcolor>
+		<font>smallCaps</font>
+	</include>
+	<include name="infoPageLabel">	
+		<posx>30</posx>
+		<posy>20</posy>
+		<width>740</width>
+		<aligny>center</aligny>
+		<font>pageLabel</font>
+		<textcolor>Color5</textcolor>
+		<visible>!Window.IsActive(136) | !Control.IsVisible(56)</visible>
+		<include>fadeinout</include>
+	</include>
+	
+	<include name="PageLabel">
+		<posx>34</posx>
+		<posy>20</posy>
+		<width>950</width>
+		<aligny>center</aligny>
+		<font>special</font>
+		<textcolor>Color1</textcolor>
+		<include>transition3</include>
+	</include>
+
+
+<!-- VIDEO PAGELABELS -------------------------------------------------------------------------------------------->			
+	<include name="videoPageLabel">
+		<posx>34</posx>
+		<posy>25</posy>
+		<width>950</width>
+		<aligny>center</aligny>
+		<font>special</font>
+		<textcolor>Color1</textcolor>
+		<include>transition3</include>
+		<visible>!Container.Scrolling</visible>
+	</include>
+	<include name="videoPageSubLabel">
+		<posx>34</posx>
+		<posy>54</posy>
+		<width>400</width>
+		<aligny>center</aligny>
+		<font>special2</font>
+		<textcolor>Color2</textcolor>
+		<visible>!Container.Scrolling</visible>
+	</include>
+
+	<include name="videoFanartPageLabels">
+
+	<!-- video ---------------------------------------------------------------->
+		<control type="label">
+			<label>$INFO[Container.FirstTitle] [COLOR=Color2]$INFO[Container.SecondTitle][/COLOR]</label>
+			<include>videoPageLabel</include>
+			<visible>!Window.IsActive(2003)</visible>
+		</control>
+	
+<!-- pictures ---------------------------------------------------------------->		
+	<control type="label">
+		<description>programs</description>
+		<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
+		<include>videoFanartPageLabel</include>
+		<visible>Control.IsVisible(50) + Window.IsActive(10002)</visible>
+	</control>
+<!-- programs ---------------------------------------------------------------->		
+	<!--control type="label">
+		<description>programs</description>
+		<label>[UPPERCASE][COLOR=Color5]$INFO[Container.NumItems,, ][/COLOR]$LOCALIZE[10506][/UPPERCASE]</label>
+		<include>videoFanartPageLabel</include>
+		<visible>Control.IsVisible(50) + Window.IsActive(1) + IsEmpty(Container.PluginName)</visible>
+	</control-->
+<!-- scripts ---------------------------------------------------------------->		
+	<!--control type="label">
+		<description>scripts</description>
+		<label>[UPPERCASE]$LOCALIZE[247][/UPPERCASE]</label>
+		<include>videoFanartPageLabel</include>
+		<visible>Control.IsVisible(50) + Window.IsActive(10020)</visible>
+	</control-->
+
+	</include>
+
+</includes>
