@@ -1,13 +1,11 @@
-<!--Alaska-->
+        <!--ReFocus-->
 <window id="2600">
 	<defaultcontrol always="true">8000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	
-	
 	<controls>
 		<include>themeBackground2</include>
-		
-		<!-- FAKE INFO TRIGGER BUTTON ----------------------------------------------->	
+		    
+		<!-- fake info trigger button -->	
 		<control type="button" id="8000">
 			<label>SHOULD NOT SEE ME</label>
 			<onup>53</onup>
@@ -17,8 +15,7 @@
 			<width>200</width>
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
-		
-		
+		<!-- weather fanart -->
 		<control type="group">
 			<visible>Skin.HasSetting(weatherFanart)</visible>
 			
@@ -43,8 +40,8 @@
 				<include>transition2</include>
 			</control>
 		</control>
-		
-		<control type="label">
+        <!-- location -->
+        <control type="label">
 			<posx>34</posx>
 			<posy>19</posy>
 			<label>[LOWERCASE]$INFO[Weather.Location][/LOWERCASE]</label>
@@ -52,377 +49,439 @@
 			<shadowcolor>ff000000</shadowcolor>
 			<include>PageLabel</include>
 		</control>
-		
-		<control type="group">
-			<control type="label">
+        <!-- last updated -->
+        <control type="group">
+            <control type="label">
 				<posx>20r</posx>
-				<width>300</width>
-				<label>$LOCALIZE[24069]</label>
-				<include>notificationTop</include>
-				<visible>!Skin.HasSetting(weatherFanart)</visible>
+                <width>300</width>
+                <label>$LOCALIZE[40018]</label>
+                <include>notificationTop</include>
+				<visible>!Skin.HasSetting(weatherFanart) + Weather.IsFetched</visible>
 			</control>
 			<control type="label">
-				<posx>20r</posx>
-				<width>300</width>
-				<label>$LOCALIZE[24069]</label>
+                <posx>20r</posx>
+                <width>300</width>
+				<label>Update</label>
 				<textcolor>Color1</textcolor>
 				<shadowcolor>ff000000</shadowcolor>
 				<include>notificationTop</include>
-				<visible>Skin.HasSetting(weatherFanart)</visible>
+				<visible>Skin.HasSetting(weatherFanart) + Weather.IsFetched</visible>
 			</control>
-			<control type="label">
+			<control type="label" id="11">
 				<posx>20r</posx>
 				<width>300</width>
-				<label>$INFO[Window.Property(Updated)]</label>
 				<include>notificationBottom</include>
 				<visible>!Skin.HasSetting(weatherFanart)</visible>
 			</control>
-			<control type="label">
+			<control type="label" id="11">
 				<posx>20r</posx>
 				<width>300</width>
-				<label>$INFO[Window.Property(Updated)]</label>
 				<textcolor>Color1</textcolor>
 				<shadowcolor>ff000000</shadowcolor>
 				<include>notificationBottom</include>
 				<visible>Skin.HasSetting(weatherFanart)</visible>
 			</control>
 		</control>
-		
-	<control type="group" id="5000">
-		<include>transition2</include>
-		<include>contextMenuHide</include>
-		<onleft>300</onleft>
-		<animation effect="slide" start="0,0" end="0,-150" time="0" condition="!Skin.HasSetting(weatherFanart)">Conditional</animation>
-		
-		<control type="label">
-			<posx>119</posx>
-			<posy>360</posy>
-			<label>[LOWERCASE]$LOCALIZE[33006][/LOWERCASE]</label>
-			<textcolor>Color1</textcolor>
-			<include>PageLabel</include>
-		</control>
-		
-		<control type="fixedlist" id="100">
-			<posx>120</posx>
-			<posy>410</posy>
-			<width>400</width>
-			<height>600</height>
-
-			<itemlayout width="250" height="40">
-				<control type="label">
-					<width>430</width>
+        
+        <control type="group" id="5000">
+            <include>transition2</include>
+            <include>contextMenuHide</include>
+            <onleft>300</onleft>
+            <animation effect="slide" start="0,0" end="0,-150" time="0" condition="!Skin.HasSetting(weatherFanart)">Conditional</animation>
+            <!-- today -->
+            <control type="label">
+                <posx>119</posx>
+                <posy>360</posy>
+                <label>[LOWERCASE]$LOCALIZE[33006][/LOWERCASE]</label>
+                <textcolor>Color1</textcolor>
+                <include>PageLabel</include>
+            </control>
+            <!-- current temp -->
+            <control type="label">
+                <label>[B]$LOCALIZE[31101]:[/B]</label>
+                <posx>120</posx>
+                <posy>410</posy>
+                <width>430</width>
+                <height>40</height>
+                <font>mediumLow</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>Color1</textcolor>
+            </control>
+            <control type="label" id="23">
+                <width>430</width>
+                <height>40</height>
+                <posx>290</posx>
+                <posy>410</posy>
+                <font>mediumLow</font>
+                <align>right</align>
+                <aligny>center</aligny>
+                <textcolor>Color1</textcolor>
+            </control>
+            <!-- current condition -->
+            <control type="label">
+                <label>[B]$LOCALIZE[33020]:[/B]</label>
+                <width>430</width>
+                <height>40</height>
+                <posx>120</posx>
+                <posy>450</posy>
+                <font>mediumLow</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>Color1</textcolor>
+            </control>
+            <control type="label" id="22">
+                <width>430</width>
+                <height>40</height>
+                <posx>228</posx>
+                <posy>450</posy>
+                <font>mediumLow</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>Color1</textcolor>
+            </control>
+            <!-- feels like -->
+            <control type="label">
+                <label>[B]$LOCALIZE[402]:[/B]</label>
+                <width>430</width>
+                <height>40</height>
+                <posx>120</posx>
+                <posy>490</posy>
+                <font>mediumLow</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>Color1</textcolor>
+            </control>
+            <control type="label" id="24">
+                 <width>430</width>
+                <height>40</height>
+                <posx>220</posx>
+                <posy>490</posy>
+                <font>mediumLow</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>Color1</textcolor>
+            </control>
+            <!-- dew point -->
+            <control type="label">
+                <label>[B]$LOCALIZE[405]:[/B]</label>
+                <width>430</width>
+                <height>40</height>
+                <posx>120</posx>
+                <posy>530</posy>
+                <font>mediumLow</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>Color1</textcolor>
+            </control>
+            <control type="label" id="27">
+                <width>430</width>
+                <height>40</height>
+                <posx>230</posx>
+                <posy>530</posy>
+                <font>mediumLow</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>Color1</textcolor>
+            </control>
+            <!-- humidity -->
+            <control type="label">
+                <label>[B]$LOCALIZE[406]:[/B]</label>
+                <width>430</width>
+                <height>40</height>
+                <posx>120</posx>
+                <posy>570</posy>
+                <font>mediumLow</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>Color1</textcolor>
+            </control>
+            <control type="label" id="28">
+                <width>430</width>
+                <height>40</height>
+                <posx>220</posx>
+                <posy>570</posy>
+                <font>mediumLow</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>Color1</textcolor>
+            </control>
+            <!-- uv index -->
+            <control type="label">
+                <label>[B]$LOCALIZE[403]:[/B]</label>
+                <width>430</width>
+                <height>40</height>
+                <posx>120</posx>
+                <posy>610</posy>
+                <font>mediumLow</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>Color1</textcolor>
+            </control>
+            <control type="label" id="25">
+                <width>430</width>
+                <height>40</height>
+                <color>white</color>
+                <posx>216</posx>
+                <posy>610</posy>
+                <font>mediumLow</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>Color1</textcolor>
+            </control>
+            <!-- wind -->
+            <control type="label">
+                <label>[B]$LOCALIZE[404]:[/B]</label>
+                <width>430</width>
+                <height>40</height>
+                <posx>120</posx>
+                <posy>650</posy>
+                <font>mediumLow</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>Color1</textcolor>
+            </control>
+            <control type="label" id="26">
+                <width>430</width>
+                <height>40</height>
+                <posx>183</posx>
+                <posy>650</posy>
+                <font>mediumLow</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>Color1</textcolor>
+            </control>
+            <!-- day 1 -->
+            <control type="group">
+                <posx>380</posx>
+                <posy>340</posy>
+                <!-- day label -->
+                <control type="label" id="41">
+                    <textcolor>Color1</textcolor>
+                    <width>400</width>
+                    <include>PageLabel</include>
+                </control>
+                <!-- condition -->
+				<control type="label" id="44">
+                    <width>400</width>
 					<height>40</height>
+					<posx>34</posx>
+					<posy>70</posy>
+					<font>mediumLow</font>
 					<align>left</align>
-					<aligny>center</aligny>
+                    <aligny>center</aligny>
 					<textcolor>Color1</textcolor>
-					<font>mediumLow</font>
-					<info>ListItem.Label</info>
 				</control>
+				<!-- high temp -->
 				<control type="label">
-					<posx>385</posx>
-					<width>430</width>
+					<label>[B]$LOCALIZE[393]:[/B]</label>
+					<width>400</width>
 					<height>40</height>
-					<align>right</align>
-					<aligny>center</aligny>
-					<textcolor>Color1</textcolor>
+					<posx>34</posx>
+					<posy>110</posy>
 					<font>mediumLow</font>
-					<info>ListItem.Label2</info>
-				</control>
-			</itemlayout>
-
-		  <focusedlayout height="40" width="250">
-				<control type="label">
-					<width>430</width>
-					<height>40</height>
 					<align>left</align>
-					<aligny>center</aligny>
+                    <aligny>center</aligny>
 					<textcolor>Color1</textcolor>
-					<font>mediumLow</font>
-					<info>ListItem.Label</info>
 				</control>
-				<control type="label">
-					<posx>475</posx>
-					<width>430</width>
+				<control type="label" id="42">
+					<width>400</width>
 					<height>40</height>
-					<align>right</align>
-					<aligny>center</aligny>
-					<textcolor>Color1</textcolor>
+					<posx>92</posx>
+					<posy>110</posy>
 					<font>mediumLow</font>
-					<info>ListItem.Label2</info>
-				</control>
-		  </focusedlayout>
-
-		<content>
-			<item id="1">
-				<label>[B]$LOCALIZE[31101][/B]: $INFO[Window.Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
-				<label2></label2>
-				<onclick>-</onclick>
-			</item>
-			<item id="2">
-				<label>[B]$LOCALIZE[33020][/B]: $INFO[Window(Weather).Property(Current.Condition)]</label>
-				<label2></label2>
-				<onclick>-</onclick>
-			</item>
-			<item id="3">
-				<label>[B]$LOCALIZE[402][/B]: $INFO[Window(Weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label>
-				<label2></label2>
-				<onclick>-</onclick>
-			</item>
-			<item id="4">
-				<label>[B]$LOCALIZE[405][/B]: $INFO[Window(Weather).Property(Current.DewPoint)]</label>
-				<label2></label2>
-				<onclick>-</onclick>
-			</item>
-			<item id="5">
-				<label>[B]$LOCALIZE[406][/B]: $INFO[Window(Weather).Property(Current.Humidity)]</label>
-				<label2></label2>
-				<onclick>-</onclick>
-			</item>
-			<item id="6">
-				<label>[B]$LOCALIZE[403][/B]: $INFO[Window(Weather).Property(Current.UVIndex)]</label>
-				<label2></label2>
-				<onclick>-</onclick>
-			</item>
-			<item id="7">
-				<label>[B]$LOCALIZE[404][/B]: $INFO[Window(Weather).Property(Current.Wind)]</label>
-				<label2></label2>
-				<onclick>-</onclick>
-			</item>
-		</content>
-	</control>
-	
-
-<!--- DAY ONE ---------------------------------------------------------------------------------------->
-	<control type="group">
-		<posx>380</posx>
-		<posy>340</posy>
-		
-		<control type="label">
-			<label>[LOWERCASE]$INFO[Window.Property(Day1.Title)][/LOWERCASE]</label>
-			<textcolor>Color1</textcolor>
-			<width>400</width>
-			<include>PageLabel</include>
-		</control>
-		<control type="image">
-			<description>day icon</description>
-			<posx>30</posx>
-			<posy>200</posy>
-			<height>80</height>
-			<width>80</width>
-			<info>Window.Property(Day1.OutlookIcon)</info>
-			<aspectratio align="right">keep</aspectratio>
-		</control>
-					
-		<control type="fixedlist" id="110">	
-			<posx>34</posx>
-			<posy>70</posy>
-			<width>400</width>
-			<height>600</height>
-	
-			<itemlayout width="250" height="40">
-				<control type="label">
-					<width>430</width>
-					<height>40</height>
 					<align>left</align>
-					<aligny>center</aligny>
+                    <aligny>center</aligny>
 					<textcolor>Color1</textcolor>
-					<font>mediumLow</font>
-					<info>ListItem.Label</info>
 				</control>
-			</itemlayout>	
-			<focusedlayout height="40" width="250">
+				<!-- low temp -->
 				<control type="label">
-					<width>430</width>
+					<label>[B]$LOCALIZE[391]:[/B]</label>
+					<width>400</width>
 					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textcolor>Color1</textcolor>
+					<posx>34</posx>
+					<posy>150</posy>
 					<font>mediumLow</font>
-					<info>ListItem.Label</info>
+					<align>left</align>
+                    <aligny>center</aligny>
+					<textcolor>Color1</textcolor>
 				</control>
-			</focusedlayout>
-
-			<content>
-				<item id="1">
-					<label>[B]$INFO[Window.Property(Day1.Outlook)][/B]</label>
-					<label2></label2>
-					<onclick>-</onclick>
-				</item>
-				<item id="2">
-					<label>[B]$LOCALIZE[393] :[/B] $INFO[Window.Property(Day1.HighTemp)]$INFO[System.TemperatureUnits]</label>
-					<label2></label2>
-					<onclick>-</onclick>
-				</item>
-				<item id="3">
-					<label>[B]$LOCALIZE[391] :[/B] $INFO[Window.Property(Day1.LowTemp)]$INFO[System.TemperatureUnits]</label>
-					<label2></label2>
-					<onclick>-</onclick>
-				</item>
-			</content>
-		</control>
-	</control>
-
-
-<!--- DAY TWO ---------------------------------------------------------------------------------------->
-	<control type="group">
-		<posx>640</posx>
-		<posy>340</posy>
-
-		<control type="label">
-			<label>[LOWERCASE]$INFO[Window.Property(Day2.Title)][/LOWERCASE]</label>
-			<textcolor>Color1</textcolor>
-			<width>400</width>
-			<include>PageLabel</include>
-		</control>
-		<control type="image">
-			<description>day icon</description>
-			<posx>30</posx>
-			<posy>200</posy>
-			<height>80</height>
-			<width>80</width>
-			<info>Window.Property(Day2.OutlookIcon)</info>
-			<aspectratio align="right">keep</aspectratio>
-		</control>
-
-		<control type="fixedlist" id="110">	
-			<posx>34</posx>
-			<posy>70</posy>
-			<width>400</width>
-			<height>600</height>
-
-			<itemlayout width="250" height="40">
+				<control type="label" id="43">
+					<width>400</width>
+					<height>40</height>
+					<posx>82</posx>
+					<posy>150</posy>
+					<font>mediumLow</font>
+					<align>left</align>
+                    <aligny>center</aligny>
+					<textcolor>Color1</textcolor>
+				</control>
+                <!-- condition icon -->
+                <control type="image" id="45">
+                    <posx>30</posx>
+                    <posy>200</posy>
+                    <height>80</height>
+                    <width>80</width>
+                    <aspectratio align="right">keep</aspectratio>
+                </control>
+            </control>
+            <!-- day two -->
+            <control type="group">
+                <posx>640</posx>
+                <posy>340</posy>
+                <!-- day label -->
+                <control type="label" id="51">
+                    <textcolor>Color1</textcolor>
+                    <width>400</width>
+                    <include>PageLabel</include>
+                </control>
+                <!-- condition -->
+				<control type="label" id="54">
+                    <width>400</width>
+					<height>40</height>
+					<posx>34</posx>
+					<posy>70</posy>
+					<font>mediumLow</font>
+					<align>left</align>
+                    <aligny>center</aligny>
+					<textcolor>Color1</textcolor>
+				</control>
+				<!-- high temp -->
 				<control type="label">
-					<width>430</width>
+					<label>[B]$LOCALIZE[393]:[/B]</label>
+					<width>400</width>
 					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textcolor>Color1</textcolor>
+					<posx>34</posx>
+					<posy>110</posy>
 					<font>mediumLow</font>
-					<info>ListItem.Label</info>
+					<align>left</align>
+                    <aligny>center</aligny>
+					<textcolor>Color1</textcolor>
 				</control>
-			</itemlayout>	
-			<focusedlayout height="40" width="250">
+				<control type="label" id="52">
+					<width>400</width>
+					<height>40</height>
+					<posx>92</posx>
+					<posy>110</posy>
+					<font>mediumLow</font>
+					<align>left</align>
+                    <aligny>center</aligny>
+					<textcolor>Color1</textcolor>
+				</control>
+				<!-- low temp -->
 				<control type="label">
-					<width>430</width>
+					<label>[B]$LOCALIZE[391]:[/B]</label>
+					<width>400</width>
 					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textcolor>Color1</textcolor>
+					<posx>34</posx>
+					<posy>150</posy>
 					<font>mediumLow</font>
-					<info>ListItem.Label</info>
+					<align>left</align>
+                    <aligny>center</aligny>
+					<textcolor>Color1</textcolor>
 				</control>
-			</focusedlayout>
-
-			<content>
-				<item id="1">
-					<label>[B]$INFO[Window.Property(Day2.Outlook)][/B]</label>
-					<label2></label2>
-					<onclick>-</onclick>
-				</item>
-				<item id="2">
-					<label>[B]$LOCALIZE[393] :[/B] $INFO[Window.Property(Day2.HighTemp)]$INFO[System.TemperatureUnits]</label>
-					<label2></label2>
-					<onclick>-</onclick>
-				</item>
-				<item id="3">
-					<label>[B]$LOCALIZE[391] :[/B] $INFO[Window.Property(Day2.LowTemp)]$INFO[System.TemperatureUnits]</label>
-					<label2></label2>
-					<onclick>-</onclick>
-				</item>
-			</content>
-		</control>
-	</control>
-	
-	
-<!--- DAY TWO ---------------------------------------------------------------------------------------->
-	<control type="group">
-		<posx>900</posx>
-		<posy>340</posy>
-
-		<control type="label">
-			<label>[LOWERCASE]$INFO[Window.Property(Day3.Title)][/LOWERCASE]</label>
-			<textcolor>Color1</textcolor>
-			<width>400</width>
-			<include>PageLabel</include>
-		</control>
-		<control type="image">
-			<description>day icon</description>
-			<posx>30</posx>
-			<posy>200</posy>
-			<height>80</height>
-			<width>80</width>
-			<info>Window.Property(Day3.OutlookIcon)</info>
-			<aspectratio align="right">keep</aspectratio>
-		</control>
-
-		<control type="fixedlist" id="110">	
-			<posx>34</posx>
-			<posy>70</posy>
-			<width>400</width>
-			<height>600</height>
-
-			<itemlayout width="250" height="40">
+				<control type="label" id="53">
+                    <width>400</width>
+					<height>40</height>
+					<posx>82</posx>
+					<posy>150</posy>
+					<font>mediumLow</font>
+					<align>left</align>
+                    <aligny>center</aligny>
+					<textcolor>Color1</textcolor>
+				</control>
+                <!-- condition icon -->
+                <control type="image" id="55">
+                    <posx>30</posx>
+                    <posy>200</posy>
+                    <height>80</height>
+                    <width>80</width>
+                    <aspectratio align="right">keep</aspectratio>
+                </control>
+            </control>
+            <!-- day three -->
+            <control type="group">
+                <posx>900</posx>
+                <posy>340</posy>
+                <!-- day label -->
+                <control type="label" id="61">
+                    <textcolor>Color1</textcolor>
+                    <width>400</width>
+                    <include>PageLabel</include>
+                </control>
+                <!-- condition -->
+				<control type="label" id="64">
+                    <width>400</width>
+					<height>40</height>
+					<posx>34</posx>
+					<posy>70</posy>
+					<font>mediumLow</font>
+					<align>left</align>
+                    <aligny>center</aligny>
+					<textcolor>Color1</textcolor>
+				</control>
+				<!-- high temp -->
 				<control type="label">
-					<width>430</width>
+					<label>[B]$LOCALIZE[393]:[/B]</label>
+					<width>400</width>
 					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textcolor>Color1</textcolor>
+					<posx>34</posx>
+					<posy>110</posy>
 					<font>mediumLow</font>
-					<info>ListItem.Label</info>
+					<align>left</align>
+                    <aligny>center</aligny>
+					<textcolor>Color1</textcolor>
 				</control>
-			</itemlayout>	
-			<focusedlayout height="40" width="250">
+				<control type="label" id="62">
+                    <width>400</width>
+					<height>40</height>
+					<posx>92</posx>
+					<posy>110</posy>
+					<font>mediumLow</font>
+					<align>left</align>
+                    <aligny>center</aligny>
+					<textcolor>Color1</textcolor>
+				</control>
+				<!-- low temp -->
 				<control type="label">
-					<width>430</width>
+					<label>[B]$LOCALIZE[391]:[/B]</label>
+					<width>400</width>
 					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textcolor>Color1</textcolor>
+					<posx>34</posx>
+					<posy>150</posy>
 					<font>mediumLow</font>
-					<info>ListItem.Label</info>
+					<align>left</align>
+                    <aligny>center</aligny>
+					<textcolor>Color1</textcolor>
 				</control>
-			</focusedlayout>
-
-			<content>
-				<item id="1">
-					<label>[B]$INFO[Window.Property(Day3.Outlook)][/B]</label>
-					<label2></label2>
-					<onclick>-</onclick>
-				</item>
-				<item id="2">
-					<label>[B]$LOCALIZE[393] :[/B] $INFO[Window.Property(Day3.HighTemp)]$INFO[System.TemperatureUnits]</label>
-					<label2></label2>
-					<onclick>-</onclick>
-				</item>
-				<item id="3">
-					<label>[B]$LOCALIZE[391] :[/B] $INFO[Window.Property(Day3.LowTemp)]$INFO[System.TemperatureUnits]</label>
-					<label2></label2>
-					<onclick>-</onclick>
-				</item>
-			</content>
-		</control>
-	</control>
-</control>	
-	
-<include>WeatherMenu</include>
-
-<control type="image">
-	<posx>34</posx>
-	<posy>361</posy>
-	<height>32</height>
-	<width>32</width>
-	<include>scrollLeftView</include>
-</control>
-
-<!--<control type="image">
-	<posx>92r</posx>
-	<posy>79r</posy>
-	<width>72</width>
-	<height>59</height>
-	<texture>weather_channel_logo.png</texture>
-</control>-->
-
-			
+				<control type="label" id="63">
+                    <width>400</width>
+					<height>40</height>
+					<posx>82</posx>
+					<posy>150</posy>
+					<font>mediumLow</font>
+					<align>left</align>
+                    <aligny>center</aligny>
+					<textcolor>Color1</textcolor>
+				</control>
+                <!-- condition icon -->
+                <control type="image" id="65">
+                    <posx>30</posx>
+                    <posy>200</posy>
+                    <height>80</height>
+                    <width>80</width>
+                    <aspectratio align="right">keep</aspectratio>
+                </control>
+            </control>
+            
+            <control type="image">
+                <posx>34</posx>
+                <posy>361</posy>
+                <height>32</height>
+                <width>32</width>
+                <include>scrollLeftView</include>
+            </control>
+        </control>
+        <include>WeatherMenu</include>
 	</controls>
 </window>

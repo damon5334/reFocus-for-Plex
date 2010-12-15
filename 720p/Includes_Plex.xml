@@ -40,23 +40,15 @@
       <description>Next cover</description>
       <visible>Player.HasMusicPlaylist</visible>
       <control type="image">
-        <width>264</width>
-        <height>264</height>
-        <info>MusicPlayer.NextNewCover</info>
-        <aspectratio>stretch</aspectratio>
-        <texture diffuse="frames/wideframemaskreflect.png"/>
-      </control>
-      <control type="image">
         <posy>264</posy>
         <width>264</width>
         <height>264</height>
         <info>MusicPlayer.NextNewCover</info>
         <aspectratio>stretch</aspectratio>
-        <texture flipy="true" diffuse="NowPlayingSmallReflectionDiffuse.png"/>
+        <texture flipy="true" diffuse="frames/wideframemaskreflect.png"/>
       </control>
       <control type="image">
-        <posx>104</posx>
-        <width>176</width>
+        <width>264</width>
         <height>264</height>
         <aspectratio>stretch</aspectratio>
         <texture>frames/albumframe.png</texture>
@@ -65,9 +57,10 @@
       <control type="image">
         <width>264</width>
         <height>264</height>
+        <info>MusicPlayer.NextNewCover</info>
         <aspectratio>stretch</aspectratio>
         <visible>MusicPlayer.HasNext</visible>
-        <texture diffuse="NowPlayingSmallCoverDiffuse.png">NowPlayingCoverOverlay.png</texture>
+        <texture diffuse="frames/albumframemasksmall.png"/>
       </control>
     </control>
   </include>
