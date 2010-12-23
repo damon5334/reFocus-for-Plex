@@ -1,9 +1,9 @@
 <window id="0">
   <defaultcontrol always="true">300</defaultcontrol>
   <allowoverlay>no</allowoverlay>
-
+  
   <controls>
-
+       
 <!-- BACKGROUND MEDIA -------------------------------------------------------------------------------------------------------------------------->
 		<control type="image">
 			<aspectratio>scale</aspectratio>
@@ -78,14 +78,14 @@
 			<randomize>true</randomize>
 			<loop>yes</loop>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">Container(300).HasFocus(6) + Skin.HasSetting(weatherFanart)</visible>
+			<visible allowhiddenfocus="true">Container(300).HasFocus(6) | Container(9000).HasFocus(6) + Skin.HasSetting(weatherFanart)</visible>
 		</control>
 		<control type="largeimage">
 			<include>screentype</include>
 			<aspectratio>scale</aspectratio>
 			<texture>$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
 			<fadetime>850</fadetime>
-			<visible allowhiddenfocus="true">Container(300).HasFocus(12) + Skin.HasSetting(homemenuNP)</visible>
+			<visible allowhiddenfocus="true">Container(300).HasFocus(12) | Container(9000).HasFocus(12) + Skin.HasSetting(homemenuNP)</visible>
 			<include>fadeinout</include>
 		</control>
 		<control type="largeimage">

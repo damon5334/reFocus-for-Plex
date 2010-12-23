@@ -11,9 +11,8 @@
 			<onright>23</onright>
 			<onup>50</onup>
 			<ondown>50</ondown>
-			<focusposition>3</focusposition>
 			<scrolltime>150</scrolltime>	
-			<wraparound>yes</wraparound>
+			<orientation>vertical</orientation>
 			<pagecontrol>23</pagecontrol>
 			<include>transition2</include>
 			<include>infoDialogHide</include>
@@ -95,6 +94,7 @@
 					<posx>40</posx>
 					<width>570</width>
 					<label>$INFO[ListItem.Label]</label>
+                    <font>bigLow</font>
 					<include>listMenu</include>
 				</control>
 			</itemlayout>
@@ -109,6 +109,7 @@
 					<posx>40</posx>
 					<width>570</width>
 					<label>$INFO[ListItem.Label]</label>
+                    <font>bigLow</font>
 					<include>listMenuFocus</include>
 				</control>
 			</focusedlayout>
@@ -294,7 +295,8 @@
 			<orientation>horizontal</orientation>
 			<focusposition>2</focusposition>
 			<preloaditems>3</preloaditems>
-			<include>transition2</include>
+			<visible>!Window.IsActive(progressdialog) + [Container.Content(albums) | Container.Content(singles) | Container.Content(songs)]</visible>
+            <include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
 

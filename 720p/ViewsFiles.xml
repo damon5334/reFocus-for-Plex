@@ -180,7 +180,7 @@
 
 
 <!---------- THUMBNAILS VIEW (MUSIC) ---------------------------------------------------------------------------------->
-	<include name="ThumbnailsMF">
+	<!--<include name="ThumbnailsMF">
 		<control type="panel" id="59">
 			<viewtype label="Thumbnails">bigicon</viewtype>
 			<posx>35</posx>
@@ -280,7 +280,7 @@
 				</control>
 			</focusedlayout>			
 		</control>
-	</include>
+	</include>-->
 
 	
 <!---------- PLAYLIST VIEW -----------------------------------------------------------------------------
@@ -490,7 +490,7 @@
 
 
 <!---------- THUMBNAILS VIEW ------------------------------------------------------------------------------------------->																																	
-	<include name="view_Thumbs2">
+	<!--<include name="view_Thumbs2">
 		<control type="panel" id="59">
 			<viewtype label="31009">bigicon</viewtype>	
 			<posx>50</posx>
@@ -557,7 +557,7 @@
 				</control>				
 			</focusedlayout>
 		</control>
-	</include>																								
+	</include>-->																								
 
 																															
 <!---------- PAGECONTROL ------------------------------------------------------------------------------------------>

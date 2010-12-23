@@ -44,7 +44,6 @@
 					<include>dialogButton</include>
 				</control>
 			</control>
-			
 		</control>
 	</controls>
 </window>

@@ -1,4 +1,4 @@
-﻿<window id="107">
+<window id="107">
 	<controls>
 		<control type="group">
 			<visible>![Window.IsActive(12999) | Window.IsActive(107) | Window.IsActive(script-XBMC_Lyrics-main.xml)]</visible>
@@ -20,6 +20,6 @@
 				<texture>dialogs/notificationIcon.png</texture>
 				<include>fadeinout</include>
 			</control>
-		</controls>
-	</control>
+        </control>
+    </controls>
 </window>

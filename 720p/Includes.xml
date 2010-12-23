@@ -2,7 +2,7 @@
 	<include file="Defaults.xml">-</include>
 	<include file="Includes_Plex.xml">-</include>
 	
-	<!--include file="ViewsFiles.xml">-</include-->
+    <include file="ViewsFiles.xml">-</include>
 	<include file="ViewsMusic.xml">-</include>
 	<include file="ViewsVideo.xml">-</include>
 	<include file="ViewsPictures.xml">-</include>
@@ -19,6 +19,7 @@
 	<include file="HomeAccessoriesMenu.xml">-</include>
 	<include file="HomeSettingsMenu.xml">-</include>
 	<include file="HomeExitMenu.xml">-</include>
+    <include file="HomeRecent.xml">-</include>
 	
 	<include file="LibraryVideoMenu.xml">-</include>
 	<include file="LibraryMusicMenu.xml">-</include>
@@ -33,7 +34,7 @@
 	<include file="IncludesAnimations.xml">-</include>
 	<include file="IncludesDialogs.xml">-</include>
 	<include file="IncludesPageControl.xml">-</include>
-
+    
 	<!-- Theme overlays -->
 
 		<include name="bluethemeoverlay">
@@ -148,8 +149,7 @@
 		<textcolor>Color1</textcolor>
 		<include>transition1</include>
 	</include>
-
-	<include name="screentype">
+    <include name="screentype">
 		<width>1280</width>
 		<height>720</height>
 		<aspectratio>scale</aspectratio>
@@ -168,7 +168,7 @@
 
 
 <!-- ADDONS ---------------------------------------------------------------------------------->
-<include name="info_AddonList">
+<!--<include name="info_AddonList">
 	<control type="group">
 		<posx>665</posx>
 		<posy>100</posy>
@@ -287,7 +287,7 @@
 			<font>normalLow</font>
 		</control>
 	</control>
-</include>
+</include>-->
 
 <!-- MUSIC ---------------------------------------------------------------------------------->
 <include name="info_MusicList">
@@ -368,7 +368,50 @@
 		<textureslidernib border="1">-</textureslidernib>
 		<textureslidernibfocus border="1">-</textureslidernibfocus>
 	</include>
-
+    <!--Added from older version of this skin---> 
+    <include name="scrollLeftView">
+		<width>24</width>
+		<height>24</height>
+		<texture>views/scrollLeftIndicatorAlt.png</texture>
+		<aspectratio>keep</aspectratio>
+		<include>transition2</include>
+		<include>contextMenuHide</include>
+		<visible>Skin.HasSetting(scrollIndicators)</visible>
+	</include>
+    <include name="scrollLeftDialog">
+		<width>24</width>
+		<height>24</height>
+		<texture>dialogs/scrollLeftIndicator.png</texture>
+		<aspectratio>keep</aspectratio>
+		<include>fadeinout</include>
+		<visible>Skin.HasSetting(scrollIndicators)</visible>
+	</include>
+	<include name="scrollRightView">
+		<width>24</width>
+		<height>24</height>
+		<texture>views/scrollRightIndicatorAlt.png</texture>
+		<aspectratio>keep</aspectratio>
+		<include>fadeinout</include>
+		<visible>Skin.HasSetting(scrollIndicators)</visible>
+	</include>
+	<include name="scrollRightDialog">
+		<width>24</width>
+		<height>24</height>
+		<texture>dialogs/scrollRightIndicator.png</texture>
+		<aspectratio>keep</aspectratio>
+		<include>fadeinout</include>
+		<visible>Skin.HasSetting(scrollIndicators)</visible>
+	</include>
+	<include name="scrollDownView">
+		<width>24</width>
+		<height>24</height>
+		<texture>views/scrollDownIndicatorAlt.png</texture>
+		<aspectratio>keep</aspectratio>
+		<include>transition2</include>
+		<include>contextMenuHide</include>
+		<visible>Skin.HasSetting(scrollIndicators)</visible>
+	</include>
+    <!--Added from older version of this skin--->
 	<include name="watchedOverlay">
 		<width>24</width>
 		<height>24</height>
@@ -394,7 +437,7 @@
 	
 	<include name="categoryButton">
 		<texturefocus border="13,6,13,6">settings/list-focusRev.png</texturefocus>
-		<texturenofocus>-</texturenofocus>
+        <texturenofocus>-</texturenofocus>
 		<textoffsety>3</textoffsety>
 		<textoffsetx>25</textoffsetx>
 		<font>category</font>
@@ -529,7 +572,12 @@
 		<autoscroll delay="6000" time="3000" repeat="10000"></autoscroll>
 	</include>
 
-	
+	<include name="Heading">
+		<height>35</height>
+		<aligny>center</aligny>
+		<font>special3</font>
+		<textcolor>Color1</textcolor>
+	</include>
 	<include name="Heading1">
 		<height>35</height>
 		<aligny>center</aligny>
@@ -549,17 +597,13 @@
 		<textcolor>Color2</textcolor>
 		<selectedcolor>Selected</selectedcolor>
 	</include>
-
-
-<!--
+<!-- Commented out, but still in use -->
 	<include name="textBox">
 		<aligny>top</aligny>
 		<font>normalLow</font>
 		<textcolor>Color7</textcolor>
-		
 		<include>autoscroll-plot</include>
 	</include>
--->	
 	
 	<include name="infoDialogMeta">
 		<height>22</height>
@@ -567,12 +611,12 @@
 		<font>special6</font>
 		<textcolor>Color2</textcolor>
 	</include>
-	<include name="infoDialogMeta2">
+	<!--<include name="infoDialogMeta2">
 		<height>22</height>
 		<aligny>center</aligny>
 		<font>normal</font>
 		<textcolor>Color2</textcolor>
-	</include>
+	</include>-->
 
 
 
@@ -740,14 +784,14 @@
 			<description>movies bg</description>
 			<include>screentype</include>
 			<texture background="true">backgrounds/library/moviesNoFanart.png</texture>
-			<visible>Skin.HasSetting(FanartGlobal) + IsEmpty(ListItem.Property(Fanart_Image)) + [Container.Content(movies) | Window.IsActive(21) | Window.IsActive(22) | Window.IsActive(23) | Window.IsActive(24) | Window.IsActive(25)]+ ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
+			<visible>Skin.HasSetting(FanartGlobal) + IsEmpty(ListItem.Property(Fanart_Image)) + [Container.Content(movies) | Window.IsActive(21) | Window.IsActive(22) | Window.IsActive(23) | Window.IsActive(24) | Window.IsActive(25)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
 			<include>transition2</include>
 		</control>
 		<control type="image">
 			<description>tv bg</description>
 			<include>screentype</include>
 			<texture background="true">backgrounds/library/tvshowsNoFanart.png</texture>
-			<visible>Skin.HasSetting(FanartGlobal) + IsEmpty(ListItem.Property(Fanart_Image)) + [Container.Content(tvshows) | Container.Content(seasons)  | Container.Content(episodes) + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
+			<visible>Skin.HasSetting(FanartGlobal) + IsEmpty(ListItem.Property(Fanart_Image)) + [Container.Content(tvshows) | Container.Content(seasons)  | Container.Content(episodes)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
 			<include>transition2</include>
 		</control>
 		<control type="image">

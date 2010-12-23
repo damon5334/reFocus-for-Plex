@@ -43,6 +43,7 @@
 				<ondown>11</ondown>
 				<include>categoryButton</include>
 			</control>
+            
 			<control type="button" id="11">
 				<description>Home Menu Settings</description>
 				<posy>42</posy>
@@ -53,6 +54,7 @@
 				<ondown>14</ondown>
 				<include>categoryButton</include>
 			</control>
+            
 			<!--control type="button" id="12">
 				<description>Home Video Menu Settings</description>
 				<posy>84</posy>
@@ -83,6 +85,7 @@
 				<ondown>15</ondown>
 				<include>categoryButton</include>
 			</control>
+            
 			<control type="button" id="15">
 				<description>View Settings</description>
 				<posy>126</posy>
@@ -93,16 +96,17 @@
 				<ondown>17</ondown>
 				<include>categoryButton</include>
 			</control>
-			<!--control type="button" id="16">
+            
+			<!--<control type="button" id="16">
 				<description>Add-ons</description>
-				<posy>252</posy>
+				<posy>168</posy>
 				<label>$LOCALIZE[24001]</label>
 				<onfocus>Skin.SetString(SkinSettings,7)</onfocus>
 				<onright>700</onright>
 				<onup>15</onup>
 				<ondown>17</ondown>
 				<include>categoryButton</include>
-			</control-->
+			</control>-->
 			<control type="button" id="17">
 				<description>Skin credits</description>
 				<posy>168</posy>
@@ -125,7 +129,7 @@
 			<onright>9001</onright>
 			<onup>100</onup>
 			<ondown>100</ondown>
-			<include>pageslide</include>
+            <!--<include>pageslide</include>-->
 			<itemgap>0</itemgap>
 			<visible>Skin.String(SkinSettings,1)</visible>
 			<include>transition2</include>
@@ -216,7 +220,7 @@
 				<description>show iTunes entry</description>
 				<label>Show iTunes in Main Menu</label>
 				<onclick>Skin.ToggleSetting(iTunesHome)</onclick>
-				<selected>!Skin.HasSetting(iTunesHome)</selected>
+				<selected>Skin.HasSetting(iTunesHome)</selected>
 				<include>settingsButton</include>
 			</control>
 			<control type="radiobutton" id="201">
@@ -608,11 +612,18 @@
 				<selected>Skin.HasSetting(extraslideflags)</selected>
 				<include>settingsButton</include>
 			</control>
-			<control type="radiobutton" id="615">
+            <control type="radiobutton" id="615">
+				<label>Disable HD Flags (thumbnails view)</label>
+				<onclick>Skin.ToggleSetting(enablehdflags)</onclick>
+				<selected>!Skin.HasSetting(enablehdflags) + !Skin.HasSetting(onlyfocusflagpanel)</selected>
+				<include>settingsButton</include>
+			</control>
+            <control type="radiobutton" id="616">
 				<label>Only Use HD Flag on Focused Item (thumbnails view)</label>
 				<onclick>Skin.ToggleSetting(onlyfocusflagpanel)</onclick>
-				<selected>Skin.HasSetting(onlyfocusflagpanel)</selected>
+				<selected>!Skin.HasSetting(onlyfocusflagpanel)</selected>
 				<include>settingsButton</include>
+                <enable>Skin.HasSetting(enablehdflags)</enable>
 			</control>
 		</control>
 

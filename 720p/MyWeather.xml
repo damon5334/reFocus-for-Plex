@@ -4,7 +4,7 @@
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<include>themeBackground2</include>
-		    
+		   
 		<!-- fake info trigger button -->	
 		<control type="button" id="8000">
 			<label>SHOULD NOT SEE ME</label>
@@ -267,7 +267,7 @@
 					<height>40</height>
 					<posx>34</posx>
 					<posy>70</posy>
-					<font>mediumLow</font>
+					<font>mediumLowBold</font>
 					<align>left</align>
                     <aligny>center</aligny>
 					<textcolor>Color1</textcolor>
@@ -341,7 +341,7 @@
 					<height>40</height>
 					<posx>34</posx>
 					<posy>70</posy>
-					<font>mediumLow</font>
+					<font>mediumLowBold</font>
 					<align>left</align>
                     <aligny>center</aligny>
 					<textcolor>Color1</textcolor>
@@ -415,7 +415,7 @@
 					<height>40</height>
 					<posx>34</posx>
 					<posy>70</posy>
-					<font>mediumLow</font>
+					<font>mediumLowBold</font>
 					<align>left</align>
                     <aligny>center</aligny>
 					<textcolor>Color1</textcolor>

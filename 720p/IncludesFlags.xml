@@ -1,23 +1,23 @@
 <includes>
 
-	<include name="studioFlag">
+	<!--<include name="studioFlag">
 		<width>128</width>
 		<height>48</height>
 		<aspectratio align="center">keep</aspectratio>
 		<colordiffuse>Color7</colordiffuse>
-	</include>
-	<include name="networkFlag">
+	</include>-->
+	<!--<include name="networkFlag">
 		<width>128</width>
 		<height>48</height>
 		<aspectratio align="center">keep</aspectratio>
 		<colordiffuse>Color7</colordiffuse>
-	</include>
-	<include name="labelFlag">
-		<width>128</width>
+	</include>-->
+	<!--<include name="labelFlag">
+        <width>128</width>
 		<height>48</height>
 		<aspectratio align="center">keep</aspectratio>
 		<colordiffuse>Color7</colordiffuse>
-	</include>
+	</include>-->
 	<include name="ratingsFlag">
 		<height>20</height>
 		<width>128</width>
@@ -84,7 +84,7 @@
 			</control-->
 		</control>
 	</include>
-	<include name="typeFlags62">
+	<!--<include name="typeFlags62">
 		<control type="grouplist" id="100">
 			<width>900</width>
 			<height>128</height>
@@ -103,15 +103,15 @@
 				<height>34</height>
 				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
-			</control>
+			</control>-->
 			<!--control type="image">
 				<width>128</width>
 				<height>34</height>
 				<texture>$INFO[Listitem.VideoResolution,special://skin/flags/type/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 			</control-->
-		</control>
-	</include>
+		<!--</control>
+        </include>-->
 	
 	
 	
@@ -275,13 +275,13 @@
 		</control>
 	</include>
 	
-	<include name="typeFlags50">
+	<!--<include name="typeFlags50">
 		<control type="image">
 			<width>39</width>
 			<height>24</height>
 			<aspectratio align="right">keep</aspectratio>
 			<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
-		</control>
+		</control>-->
 		<!--control type="image">
 			<width>39</width>
 			<height>24</height>
@@ -296,7 +296,7 @@
 			<texture>views/SD.png</texture>
 			<visible>![stringcompare(Listitem.VideoResolution,720) | stringcompare(Listitem.VideoResolution,1080)]</visible>
 		</control-->
-	</include>
+	<!--</include>-->
 	
 	<include name="studioFlags52">
 		<control type="image">
@@ -333,7 +333,7 @@
 		</control-->
 	</include>
 	
-	<include name="labelFlags52">
+    <include name="labelFlags52">
 		<control type="image">
 			<width>128</width>
 			<height>64</height>
@@ -581,7 +581,6 @@
 				<align>right</align>
 				<textcolor>Color4</textcolor>
 				<include>screenwidth</include>
-				<include>Heading</include>
 				<visible>Container.Content(movies) + !IsEmpty(ListItem.Title)</visible>
 			</control>
 		</control>
@@ -854,8 +853,8 @@
 	
 	
 
-	<include name="ratingFlagsText">
-		<!--control type="group">
+	<!--<include name="ratingFlagsText">
+        <control type="group">
 			<control type="label">
 				<label>[UPPERCASE]Rated PG-13[/UPPERCASE]</label>
 				<visible>substring(listitem.mpaa,Rated PG, Left)</visible>
@@ -891,12 +890,12 @@
 				<textcolor>Color5</textcolor>
 				<align>left</align>
 			</control>
-		</control-->
-	</include>
+		</control>
+	</include>-->
 	
 	
 	
-	<include name="ratingFlags">
+	<!--<include name="ratingFlags">
 		<control type="group">
 			<visible>Skin.HasSetting(ratingFlag) + Container.Content(movies)</visible>
 			<control type="image">
@@ -904,17 +903,17 @@
 				<include>ratingsFlag</include>
 			</control>
 		</control>
-	</include>
+	</include>-->
 	
-	<include name="ratingFlagsTV">
-		<control type="group">
+	<!--<include name="ratingFlagsTV">
+        <control type="group">
 			<visible>Skin.HasSetting(ratingFlag) + Container.Content(tvshows)</visible>
 			<control type="image">
 				<texture>$INFO[ListItem.Property(mediaTag::contentRating)]</texture>
 				<include>ratingsFlag</include>
 			</control>
 		</control>
-	</include>
+	</include>-->
 
 	
 </includes>

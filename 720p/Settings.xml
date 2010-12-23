@@ -26,8 +26,8 @@
 		</control>
 
 		<control type="group">
-			<include>pageslide</include>
-			<include>viewsmenucontext</include>
+			<!--<include>pageslide</include>-->
+			<!--<include>viewsmenucontext</include>-->
 
 			<control type="label">
 				<include>PageLabel</include>

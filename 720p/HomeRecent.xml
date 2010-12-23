@@ -1,7 +1,6 @@
 <includes>
 	<include name="homeRecent">
-	
-	
+    
 	<control type="group">
 		<visible>ControlGroup(2100).HasFocus</visible>
 		<control type="image">
@@ -299,13 +298,6 @@
 	</control>
 	
 	-->
-	
-	
-	
-	
-	
-		
-	
 	
 		
 	</include>

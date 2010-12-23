@@ -3,7 +3,7 @@
 		<control type="list" id="300">
 			<posy>20</posy>
 			<width>1100</width>
-			<height>700</height>
+			<height>675</height>
 			<onup>300</onup>
 			<ondown>300</ondown>
 			<onright>8001</onright>
@@ -31,17 +31,23 @@
 					<label>31914</label>
 					<onclick>SetFocus(1110)</onclick>
 				</item>
-				<item id="2">
+                <item id="2">
+					<label>iTunes</label>
+					<onclick>ActivateWindow(10501,http://127.0.0.1:32400/music/iTunes,return)</onclick>
+					<visible>Skin.HasSetting(iTunesHome)</visible>
+				</item>
+				<!--<item id="2">
 					<label>iTunes</label>
 					<onclick>SetFocus(1120)</onclick>
 					<visible>Skin.HasSetting(iTunesHome)</visible>
-				</item>
+				</item>-->
 				<item id="4">
 					<label>$LOCALIZE[31006]</label>
 					<onclick>SetFocus(1140)</onclick>
 					<visible>!Skin.HasSetting(homemenuAccessories)</visible>
 				</item>
-				<item id="6">
+				<!--<item id="6">-->
+                <item id="3">
 					<label>$LOCALIZE[0]</label>
 						<onclick>ActivateWindow(Programs)</onclick>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
@@ -61,7 +67,13 @@
 					<label>$LOCALIZE[8]</label>
 					<label2>$INFO[Weather.Conditions], $INFO[Weather.Temperature]</label2>
 					<onclick>ActivateWindow(weather)</onclick>
-					<visible>Skin.HasSetting(homemenuWeather)</visible>
+					<visible>Skin.HasSetting(homemenuWeather) + Weather.IsFetched</visible>
+				</item>
+				<item id="6">
+					<label>$LOCALIZE[8]</label>
+					<label2>$LOCALIZE[412]</label2>
+					<onclick>ActivateWindow(weather)</onclick>
+					<visible>Skin.HasSetting(homemenuWeather) + !Weather.IsFetched</visible>
 				</item>
 				<item id="9">
 					<label>$LOCALIZE[1036]</label>

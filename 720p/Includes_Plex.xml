@@ -262,11 +262,7 @@
     <onclick>XBMC.PlayerControl(Next)</onclick>
   </include>
 
-  <include name="OSDPlayerControls">
-
-  </include>
-  
-  <include name="OSDGroup">
+   <!--<include name="OSDGroup">
     <control type="grouplist">
       <posy>69</posy>
       <orientation>horizontal</orientation>
@@ -377,10 +373,10 @@
         <visible>VideoPlayer.HasMenu</visible>
       </control>
     </control>
-  </include>
+  </include>-->
   
   
-  <include name="OSDWebKitGroup">
+  <!--<include name="OSDWebKitGroup">
     <control type="grouplist">
       <posy>69</posy>
       <orientation>horizontal</orientation>
@@ -437,6 +433,6 @@
         <onright>215</onright>
       </control>
     </control>
-  </include>
+  </include>-->
 
 </includes>

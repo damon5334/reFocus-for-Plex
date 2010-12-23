@@ -128,10 +128,6 @@
 				</focusedlayout>
 			</control>
 		
-			
-			
-			
-			
 		<control type="panel" id="451">
 			<posx>19</posx>
 			<posy>116</posy>
@@ -183,9 +179,6 @@
 			</focusedlayout>
 		</control>
 	</control>	
-			
-			
-			
 			
 			<control type="group" id="9001">
 				<posx>589</posx>

@@ -65,8 +65,6 @@
                 <posy>88</posy>
                 <texture>rating0.png</texture>
             </control>
-
         </control>
-
     </controls>
 </window>

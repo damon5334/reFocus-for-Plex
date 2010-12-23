@@ -1,6 +1,6 @@
 <includes>
 	
-	<!-- DIALOG INCLUDES ------------------------------------------------------------------------->
+	<!-- DIALOG INCLUDES -->
 	<include name="dialogWindow">
 		<texture border="29">dialogs/dialogWindow.png</texture>
 	</include>
@@ -49,13 +49,13 @@
 		<scroll>false</scroll>
 	</include>
 
-	<include name="dialogSubHeading">
+	<!--<include name="dialogSubHeading">
 		<height>22</height>
 		<align>left</align>
 		<aligny>center</aligny>
 		<font>dialog2</font>
 		<textcolor>Color4</textcolor>
-	</include>
+	</include>-->
 
 	<include name="dialogButton">	
 		<width>120</width>
@@ -111,7 +111,7 @@
 		<texturefocus border="3">dialogs/list-focus.png</texturefocus>
 		<texturenofocus border="3">dialogs/list-nofocus.png</texturenofocus>
 	</include>
-	<include name="dialogListLabel">
+	<!--<include name="dialogListLabel">
 		<textcolor>Color4</textcolor>
 		<font>small</font>
 		<textoffsetx>15</textoffsetx>
@@ -119,7 +119,7 @@
 		<aligny>center</aligny>
 		<height>40</height>
 		<texture border="3">dialogs/list-nofocus.png</texture>
-	</include>
+	</include>-->
 
 	<include name="dialogTextField">	
 		<height>40</height>

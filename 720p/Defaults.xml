@@ -1,5 +1,4 @@
 <includes>
-	
 	<default type="image">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -66,10 +65,6 @@
 		<radiowidth>58</radiowidth>
 	</default>
 	
-	
-	
-	
-
 	<default type="togglebutton">
 		<width>15</width>
 		<height>15</height>
@@ -183,7 +178,6 @@
 		<focusedcolor>Focused</focusedcolor>
 		<selectedcolor>Selected</selectedcolor>
 		<disabledcolor>Disabled</disabledcolor>
-	
 		<scroll>false</scroll>
 		<scrollout>true</scrollout>
 		<pauseatend>200</pauseatend>
@@ -266,9 +260,6 @@
 		<spinwidth>22</spinwidth>
 		<spinheight>44</spinheight>
 	</default>
-	
-	
-	
 
 	<default type="selectbutton">
 		<posx>60</posx>

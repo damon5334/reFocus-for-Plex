@@ -2,8 +2,6 @@
 
 	<include name="InfoDialogMenu">
 
-		<include>pageContextMenu</include>
-		
 		<control type="group" id="300">
 			<posx>-275</posx>
 			<posy>20</posy>
@@ -102,9 +100,7 @@
 	
 	<include name="InfoDialogMenuM">
 
-		<include>pageContextMenu</include>
-
-		<control type="group" id="300">
+        <control type="group" id="300">
 			<posx>-275</posx>
 			<posy>20</posy>
 			<width>800</width>

@@ -201,7 +201,7 @@
 
 <!----- THUMBNAILS VIEW --------------------------------------------------------------------------------------------------------------------->
 			<control type="group">
-				<visible>Control.IsVisible(572)</visible>
+                <visible>Control.IsVisible(572)</visible>
 				<include>transition3</include>
 				<include>contextMenuHide</include>
 				<include>infoDialogHide</include>
@@ -235,15 +235,16 @@
 				<posx>1090</posx>
 				<posy>632</posy>
 				<include>labelFlags57</include>
-				<visible>Control.IsVisible(572) + Container.Content(albums)</visible>
+                <visible>Control.IsVisible(572) + Container.Content(albums)</visible>
 				<include>contextMenuHide</include>
 				<include>infoDialogHide</include>	
 			</control>	
 
 		<include>videoFanartPageLabels</include>
-		<include>musicOverlay</include>
-		<include>indicatorScrolling</include>
+		<!--<include>musicOverlay</include>-->
+		<!--<include>indicatorScrolling</include>-->
 		<include>LibraryMusicMenu</include>
+        <include>videoLibPageLabels</include>
 		
 	</controls>
 </window>

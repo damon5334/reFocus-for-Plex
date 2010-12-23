@@ -1,8 +1,6 @@
 <includes>
 	<include name="FilesMenu">
 	
-		<include>pageContextMenu</include>
-		
 		<control type="group" id="300">
 			<posx>-275</posx>
 			<posy>20</posy>

@@ -184,6 +184,11 @@
 					<label>31914</label>
 					<onclick>SetFocus(1110)</onclick>
 				</item>
+                <item id="2">
+					<label>iTunes</label>
+					<onclick>ActivateWindow(10501,plex://localhost/music/iTunes,return)</onclick>
+					<visible>Skin.HasSetting(iTunesHome)</visible>
+				</item>
 				<item id="4">
 					<label>$LOCALIZE[31006]</label>
 					<onclick>SetFocus(1140)</onclick>
@@ -207,9 +212,15 @@
 				</item>
 				<item id="6">
 					<label>$LOCALIZE[8]</label>
-					<label2>$INFO[Weather.Conditions], $INFO[Weather.Temperature]</label2>
+                    <label2>$INFO[Weather.Conditions], $INFO[Weather.Temperature]</label2>
 					<onclick>ActivateWindow(weather)</onclick>
-					<visible>Skin.HasSetting(homemenuWeather)</visible>
+					<visible>Skin.HasSetting(homemenuWeather) + Weather.IsFetched</visible>
+				</item>
+				<item id="6">
+					<label>$LOCALIZE[8]</label>
+					<label2>$LOCALIZE[412]</label2>
+					<onclick>ActivateWindow(weather)</onclick>
+					<visible>Skin.HasSetting(homemenuWeather) + !Weather.IsFetched</visible>
 				</item>
 				<item id="9">
 					<label>$LOCALIZE[1036]</label>
@@ -241,7 +252,8 @@
 				
 			</content>
 		</control>
-		<include>homeSubMenu</include>
+        <include>homeSubMenu</include>
 		<include>homeRecent</include>
+        
 	</include>
 </includes>

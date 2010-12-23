@@ -53,7 +53,7 @@
 		<control type="group" id="5">
 			<posx>350</posx>
 			<posy>105</posy>
-			<include>pageslide</include>
+			<!--<include>pageslide</include>-->
 			<visible>Skin.String(ProfileSettings,2)</visible>
 			<include>transition2</include>
 

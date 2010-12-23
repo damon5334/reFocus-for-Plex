@@ -8,13 +8,13 @@
 		<include>allscreens</include>
 		<include>AllViewCommonPageControls</include>
 		<include>videoFanartPageLabels</include>
-		<include>viewsmenucontext</include>
+		<!--<include>viewsmenucontext</include>-->
 		<include>view_Banner</include>
 		<include>view_BigList</include>
 		<include>view_GalleryFull</include>
 		<include>view_Poster</include>
 		<include>view_PosterInfo</include>
-		<include>view_BannerList</include>
+		<!--<include>view_BannerList</include>-->
 		<include>view_ThumbWide</include>
 
 <!-- FAKE INFO TRIGGER BUTTON ------------------------------------>	
@@ -868,9 +868,9 @@
 		</control>
 
 
-<!-- ICONVIEW ADD-ONS -------------------------------------------------->
+<!-- ICONVIEW ADD-ONS -------:Removed to test errors-----------
 		<include>view_ListPrograms</include>
-		<include>view_ThumbList</include>
+		<include>view_ThumbList</include>-->
 
 <!-- PAGE INCLUDES -------------------------------------------------------------------------------------------->
 		<include>LibraryVideoMenu</include>	

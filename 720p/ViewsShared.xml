@@ -792,7 +792,7 @@
 		</control>
 	</include>	
 
-	<include name="view_EmuInfo">
+	<!--<include name="view_EmuInfo">
 		<control type="panel" id="579">
 			<viewtype label="31009">bigicon</viewtype>	
 			<posx>40</posx>
@@ -856,7 +856,7 @@
 					<height>90</height>
 					<info>Listitem.Plot</info>
 				</control-->
-				</control>
+				<!--</control>
 				
 			</itemlayout>											
 			<focusedlayout height="200" width="600">
@@ -902,8 +902,8 @@
 					 <wrapmultiline>true</wrapmultiline>
 					<info>Listitem.Plot</info>
 				</control-->
-			</focusedlayout>
+			<!--</focusedlayout>
 		</control>
-	</include>
+	</include>-->
 
 </includes>

@@ -5,7 +5,7 @@
 			<posy>67</posy>
 			<visible allowhiddenfocus="true">ControlGroup(300).HasFocus(0)</visible>
 			<onright>50</onright>
-			<include>pageslide</include>
+			<!--<include>pageslide</include>-->
 			<include>pagemenus</include>
 
 			<control type="group">

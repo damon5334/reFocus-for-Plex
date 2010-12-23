@@ -55,8 +55,9 @@
 		<control type="image">
 			<posx>203</posx>
 			<posy>465</posy>
+            <aspectratio align="right">keep</aspectratio>
+            <colordiffuse>Color7</colordiffuse>
 			<texture fallback="flags/default.png">$INFO[VideoPlayer.studio,special://skin/extras/studios/,.png]</texture>
-			<include>studioFlags</include>
 		</control>
 
 	</controls>

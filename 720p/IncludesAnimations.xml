@@ -11,9 +11,9 @@
 	<include name="autoscroll-plot">
 		<autoscroll delay="10000" time="3300" repeat="10000">!Control.HasFocus(4)</autoscroll>
 	</include>
-	<include name="autoscroll-line">
+	<!--<include name="autoscroll-line">
 		<scrollspeed>20</scrollspeed>
-	</include>
+	</include>-->
 
 	<include name="fadeinout">
 		<animation type="WindowOpen">
@@ -32,7 +32,10 @@
 
 
 <!-- VIEWTYPE ------------------------------------------------------------------------->
-	<include name="focus_ThumbPoster">
+	<include name="homeRecentThumb">
+		<animation effect="zoom" tween="Back" start="100" end="130" center="110,80" time="200">Focus</animation>
+	</include>
+    <include name="focus_ThumbPoster">
 		<animation effect="zoom" tween="Back" start="100" end="130" center="90,125" time="200">Focus</animation>
 	</include>
 	<include name="focus_ThumbPosterInfo">
@@ -61,6 +64,17 @@
 			<effect type="zoom" tween="Cubic" start="120" end="100" center="105,150" time="250" />
 		</animation>
 	</include>
+    
+<!-- Copied From Above Listing -->
+    <!--<include name="focus_PosterSlideOverlay">
+		<animation type="focus">
+			<effect type="zoom" tween="Back" start="100" end="120" easing="Out" reversible="false" center="55,85" time="250"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="Cubic" start="120" end="100" center="105,150" time="250" />
+		</animation>
+	</include>-->
+    
 	<include name="focus_SlideWide">
 		<animation type="focus">
 			<effect type="zoom" tween="quadratic" start="100,100" end="125,125" reversible="false" center="auto" time="250"/>
@@ -108,12 +122,29 @@
 
 
 <!-- TRANSITIONS ------------------------------------------------------------------------->
-	<include name="transition2">		
+	<include name="transition1">		
+		<animation type="WindowOpen">
+			<effect type="fade" start="0" end="100" time="250" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="250" />
+		</animation>
+	</include>
+    
+    <include name="transition2">		
 		<animation type="WindowOpen">
 			<effect type="zoom" time="400" center="640,360" start="180" end="100" tween="cubic" easing="out" />
 			<effect type="fade" time="400" center="640,360" start="0" easing="out" end="100" />
 		</animation>			
 		<animation type="WindowClose">
+			<effect type="zoom" time="250" center="640,360" start="100" end="180" tween="cubic" easing="in" />
+			<effect type="fade" time="250" center="640,360" start="100" easing="in" end="0" />
+		</animation>
+        <animation type="Visible" condition="Window.IsActive(movieinformation) | Window.IsActive(musicinformation)">
+			<effect type="zoom" time="400" center="640,360" start="180" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="400" center="640,360" start="0" easing="out" end="100" />
+		</animation>			
+		<animation type="Hidden" condition="Window.IsActive(movieinformation) | Window.IsActive(musicinformation)">
 			<effect type="zoom" time="250" center="640,360" start="100" end="180" tween="cubic" easing="in" />
 			<effect type="fade" time="250" center="640,360" start="100" easing="in" end="0" />
 		</animation>
@@ -306,7 +337,15 @@
 			<effect type="slide" start="0,0" end="0,-96" tween="Cubic" center="auto" easing="Out" time="400" />
 		</animation>
 	</include>
-	<include name="osdButtons">
+	<!--<include name="osdButtons">
+		<animation type="focus">
+			<effect type="zoom" tween="quadratic" start="100,100" end="130,130" center="auto" time="200" />
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="130,130" end="100,100" center="auto" time="100"/>
+		</animation>
+	</include>-->
+	<include name="osdButtonsd">
 		<animation type="focus">
 			<effect type="zoom" tween="quadratic" start="100,100" end="130,130" center="auto" time="200" />
 		</animation>
@@ -314,7 +353,6 @@
 			<effect type="zoom" tween="quadratic" start="130,130" end="100,100" center="auto" time="100"/>
 		</animation>
 	</include>
-	
 	
 	<!--<include name="posterSlideFocusAlt">
 		<animation type="focus">
