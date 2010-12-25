@@ -5,9 +5,9 @@
 
 		<control type="fixedlist" id="300">
 			<posx>365</posx>
-			<posy>-25</posy>
+            <posy>65</posy>
 			<width>900</width>
-			<height>750</height>
+            <height>605</height>
 			<onup>-</onup>
 			<ondown>-</ondown>
 			<onleft>9000</onleft>
@@ -18,61 +18,38 @@
 			<scrolltime>250</scrolltime>
 			<include>transition2</include>
 			<animation effect="fade" start="100" end="20" time="350" condition="Control.HasFocus(9000) | Control.HasFocus(1110) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
-		<itemlayout width="560" height="230">
+		<itemlayout width="560" height="65">
 			<control type="group">
-			<posx>5</posx>
-			<animation effect="fade" start="100" end="90" time="350" condition="true">Conditional</animation>
-			<animation effect="zoom" start="100" end="80" time="0" center="auto" condition="true">Conditional</animation>
-			<control type="image">
-					<posx>1</posx>
-					<posy>0</posy>
-					<width>836</width>
-					<height>295</height>
-					<include>dialogWindow</include>
-					<include>focus_Banner</include>
-				</control>
-				<control type="image">
-					<posx>20</posx>
-					<posy>17</posy>
-					<width>799</width>
-					<height>200</height>
-					<texture diffuse="frames/homemask.png" fallback="thumbs/banner.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
-					<aspectratio scalediffuse="false" align="top">scale</aspectratio>
-					<include>focus_Banner</include>
-				</control>
-				<control type="image">
-					<posx>19</posx>
-					<posy>217</posy>
-					<width>800</width>
-					<include>dialogSeparator</include>
-					<include>focus_Banner</include>
-				</control>
+                <posx>5</posx>
+                <animation effect="fade" start="100" end="90" time="350" condition="true">Conditional</animation>
+                <animation effect="zoom" start="100" end="80" time="0" center="auto" condition="true">Conditional</animation>
 				<control type="label">
-					<posx>34</posx>
-					<posy>230</posy>
-					<label>$INFO[ListItem.Label]</label>
-					<font>dialog1</font>
-					<textcolor>Color1</textcolor>
-					<align>left</align>
-					<width>1100</width>
-					<include>focus_Banner</include>
+					<posx>784</posx>
+                    <posy>0</posy>
+					<width>700</width>
+					<label>$INFO[ListItem.Title]</label>
+                    <font>bigLow</font>
+                    <align>right</align>
+                    <textcolor>Color1</textcolor>
+					<include>listMenu</include>
 				</control>
-				<control type="label">
-					<posx>804</posx>
-					<posy>235</posy>
+                <control type="label">
+					<posx>784</posx>
+					<posy>23</posy>
+					<width>700</width>
 					<label>$INFO[ListItem.Label2]</label>
-					<font>mediumCaps</font>
+                    <font>smallCaps</font>
+                    <align>right</align>
 					<textcolor>Color4</textcolor>
-					<align>right</align>
-					<width>800</width>
-					<include>focus_Banner</include>
-				</control>	
+                    <include>listMenu</include>
 				</control>
+            </control>
 		</itemlayout>
-		<focusedlayout width="560" height="230">
+    <!-- Focused Item -->
+        <focusedlayout width="560" height="290">
 			<control type="group">
 			<animation effect="zoom" start="100" end="82" time="0" center="auto" condition="true">Conditional</animation>
-			<control type="image">
+                <control type="image">
 					<posx>1</posx>
 					<posy>0</posy>
 					<width>836</width>
@@ -97,24 +74,28 @@
 					<include>focus_Banner</include>
 				</control>
 				<control type="label">
-					<posx>34</posx>
-					<posy>230</posy>
+					<posx>804</posx>
+                    <posy>230</posy>
+					<label>$INFO[ListItem.Label][COLOR=BLACK] • [/COLOR][COLOR=Color2]$INFO[ListItem.Label2][/COLOR]</label>
+					<font>dialog1</font>
+					<textcolor>Color1</textcolor>
+                    <shadowcolor>fff4f4f4f</shadowcolor>
+					<align>right</align>
+                    <width>1100</width>
+					<include>focus_Banner</include>
+                    <visible>!IsEmpty(ListItem.Label2)</visible>
+				</control>
+                <control type="label">
+					<posx>804</posx>
+                    <posy>230</posy>
 					<label>$INFO[ListItem.Label]</label>
 					<font>dialog1</font>
 					<textcolor>Color1</textcolor>
-					<align>left</align>
-					<width>1100</width>
-					<include>focus_Banner</include>
-				</control>
-				<control type="label">
-					<posx>804</posx>
-					<posy>235</posy>
-					<label>$INFO[ListItem.Label2]</label>
-					<font>mediumCaps</font>
-					<textcolor>Color4</textcolor>
+                    <shadowcolor>fff4f4f4f</shadowcolor>
 					<align>right</align>
-					<width>800</width>
+                    <width>1100</width>
 					<include>focus_Banner</include>
+                    <visible>IsEmpty(ListItem.Label2)</visible>
 				</control>
 				</control>
 		</focusedlayout>
@@ -167,14 +148,6 @@
 			<include>homeMenuToggle</include>
 			<include>homeMenusLayout</include>
 			<content>
-				<!--item id="101">
-					<label>Recently Added Movies</label>
-					<onclick>ActivateWindow(10024,plex://CHANGEME.local./library/sections/1/recentlyAdded/,return)</onclick>
-				</item>
-				<item id="102">
-					<label>Recently Added TV Shows</label>
-					<onclick>ActivateWindow(10024,plex://CHANGEME.local./library/sections/2/recentlyAdded/,return)</onclick>
-				</item-->
 				<item id="99">
 					<label>31976</label>
 					<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
@@ -186,15 +159,15 @@
 				</item>
                 <item id="2">
 					<label>iTunes</label>
-					<onclick>ActivateWindow(10501,plex://localhost/music/iTunes,return)</onclick>
+					<onclick>SetFocus(1120)</onclick>
 					<visible>Skin.HasSetting(iTunesHome)</visible>
 				</item>
-				<item id="4">
-					<label>$LOCALIZE[31006]</label>
+				<!--<item id="4">
+                    <label>$LOCALIZE[31006]</label>
 					<onclick>SetFocus(1140)</onclick>
 					<visible>!Skin.HasSetting(homemenuAccessories)</visible>
-				</item>
-				<item id="6">
+				</item>-->
+				<item id="3">
 					<label>$LOCALIZE[0]</label>
 						<onclick>ActivateWindow(Programs)</onclick>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
@@ -253,7 +226,7 @@
 			</content>
 		</control>
         <include>homeSubMenu</include>
-		<include>homeRecent</include>
+		<!--<include>homeRecent</include>-->
         
 	</include>
 </includes>

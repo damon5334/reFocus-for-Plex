@@ -54,25 +54,25 @@
 				<content>
 					<item id="1">
 						<label>Artists</label>
-						<onclick>ActivateWindow(10501,plex://localhost./music/iTunes/Artists/,return)</onclick>
+						<onclick>ActivateWindow(10501,plex://localhost./music/iTunes/Artists,return)</onclick>
 					</item>
 					<item id="2">
 						<label>Compilations</label>
-						<onclick>ActivateWindow(10501,plex://localhost./music/iTunes/Compilations/,return)</onclick>
+						<onclick>ActivateWindow(10501,plex://localhost./music/iTunes/Compilations,return)</onclick>
 					</item>
 					<item id="3">
 						<label>Tracks</label>
-						<onclick>ActivateWindow(10501,plex://localhost./music/iTunes/Tracks/,return)</onclick>
+						<onclick>ActivateWindow(10501,plex://localhost./music/iTunes/Tracks,return)</onclick>
 					</item>
 					<item id="3">
 						<label>Playlists</label>
-						<onclick>ActivateWindow(10501,plex://localhost./music/iTunes/Playlists/,return)</onclick>
+						<onclick>ActivateWindow(10501,plex://localhost./music/iTunes/Playlists,return)</onclick>
 					</item>
 				</content>
 			</control>		
 		
 <!-- ACCESSORIES SUBMENU ----------------------------------------------------------------------------------------------->	
-			<control type="list" id="1140">
+	<!--		<control type="list" id="1140">
 				<posx>-800</posx>
 				<width>900</width>
 				<height>800</height>
@@ -105,7 +105,7 @@
 					</item>
 				</content>
 			</control>
-		
+		-->
 		
 <!-- SETTINGS SUBMENU ----------------------------------------------------------------------------------------------->	
 			<control type="list" id="1150">

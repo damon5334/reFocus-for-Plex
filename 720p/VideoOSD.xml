@@ -9,7 +9,7 @@
 				<width>1280</width>
 				<posy>651</posy>
 				<height>74</height>
-				<texture border="35,0,35,0">osd/playerControlsBG.png</texture>
+				<texture border="35,0,35,0">OSD/playerControlsBG.png</texture>
 			</control>
 			<control type="label" id="1">
 				<posx>310</posx>
@@ -39,8 +39,8 @@
 				<width>48</width>
 				<height>48</height>
 				<font>-</font>
-				<texturefocus>osd/osd-button-bookmarks-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-bookmarks.png</texturenofocus>
+				<texturefocus>OSD/osd-button-bookmarks-focus.png</texturefocus>
+				<texturenofocus>OSD/osd-button-bookmarks.png</texturenofocus>
 				<onup>700</onup>
 				<ondown>606</ondown>
 				<onleft>704</onleft>
@@ -52,8 +52,8 @@
 				<width>48</width>
 				<height>48</height>
 				<font>-</font>
-				<texturefocus>osd/osd-button-audiosettings-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-audiosettings.png</texturenofocus>
+				<texturefocus>OSD/osd-button-audiosettings-focus.png</texturefocus>
+				<texturenofocus>OSD/osd-button-audiosettings.png</texturenofocus>
 				<onup>700</onup>
 				<ondown>606</ondown>
 				<onleft>700</onleft>
@@ -66,8 +66,8 @@
 				<width>48</width>
 				<height>48</height>
 				<font>-</font>
-				<texturefocus>osd/osd-button-videosettings-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-videosettings.png</texturenofocus>
+				<texturefocus>OSD/osd-button-videosettings-focus.png</texturefocus>
+				<texturenofocus>OSD/osd-button-videosettings.png</texturenofocus>
 				<onup>700</onup>
 				<ondown>606</ondown>
 				<onleft>701</onleft>
@@ -78,8 +78,8 @@
 				<posx>165</posx>
 				<width>48</width>
 				<height>48</height>
-				<texturefocus>osd/osd-button-prev-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-prev.png</texturenofocus>
+				<texturefocus>OSD/osd-button-prev-focus.png</texturefocus>
+				<texturenofocus>OSD/osd-button-prev.png</texturenofocus>
 				<ondown>606</ondown>
 				<onup>700</onup>
 				<onleft>702</onleft>
@@ -90,8 +90,8 @@
 				<posx>220</posx>
 				<width>48</width>
 				<height>48</height>
-				<texturefocus>osd/osd-button-rwd-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-rwd.png</texturenofocus>
+				<texturefocus>OSD/osd-button-rwd-focus.png</texturefocus>
+				<texturenofocus>OSD/osd-button-rwd.png</texturenofocus>
 				<ondown>606</ondown>
 				<onup>700</onup>
 				<onleft>600</onleft>
@@ -102,11 +102,11 @@
 				<posx>275</posx>
 				<width>48</width>
 				<height>48</height>
-				<texturefocus>osd/osd-button-pause-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-pause.png</texturenofocus>
+				<texturefocus>OSD/osd-button-pause-focus.png</texturefocus>
+				<texturenofocus>OSD/osd-button-pause.png</texturenofocus>
 				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-				<alttexturefocus>osd/osd-button-play-focus.png</alttexturefocus>
-				<alttexturenofocus>osd/osd-button-play.png</alttexturenofocus>
+				<alttexturefocus>OSD/osd-button-play-focus.png</alttexturefocus>
+				<alttexturenofocus>OSD/osd-button-play.png</alttexturenofocus>
 				<ondown>606</ondown>
 				<onup>700</onup>
 				<onleft>601</onleft>
@@ -119,8 +119,8 @@
 				<width>48</width>
 				<height>48</height>
 				<font>-</font>
-				<texturefocus>osd/osd-button-fwd-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-fwd.png</texturenofocus>
+				<texturefocus>OSD/osd-button-fwd-focus.png</texturefocus>
+				<texturenofocus>OSD/osd-button-fwd.png</texturenofocus>
 				<onleft>602</onleft>
 				<onright>605</onright>
 				<ondown>606</ondown>
@@ -133,8 +133,8 @@
 				<width>48</width>
 				<height>48</height>
 				<font>-</font>
-				<texturefocus>osd/osd-button-next-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-next.png</texturenofocus>
+				<texturefocus>OSD/osd-button-next-focus.png</texturefocus>
+				<texturenofocus>OSD/osd-button-next.png</texturenofocus>
 				<onleft>604</onleft>
 				<onright>606</onright>
 				<ondown>606</ondown>
@@ -147,8 +147,8 @@
 				<width>48</width>
 				<height>48</height>
 				<font>-</font>
-				<texturefocus>osd/osd-button-stop-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-stop.png</texturenofocus>
+				<texturefocus>OSD/osd-button-stop-focus.png</texturefocus>
+				<texturenofocus>OSD/osd-button-stop.png</texturenofocus>
 				<onleft>605</onleft>
 				<onright>800</onright>
 				<ondown>606</ondown>
@@ -161,8 +161,8 @@
 				<width>48</width>
 				<height>48</height>
 				<font>-</font>
-				<texturefocus>osd/osd-button-subs-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-subs.png</texturenofocus>
+				<texturefocus>OSD/osd-button-subs-focus.png</texturefocus>
+				<texturenofocus>OSD/osd-button-subs.png</texturenofocus>
 				<onleft>606</onleft>
 				<onright>704</onright>
 				<ondown>606</ondown>
@@ -178,8 +178,8 @@
 				<width>48</width>
 				<height>48</height>
 				<font>-</font>
-				<texturefocus>osd/osd-button-dvd-focus.png</texturefocus>
-				<texturenofocus>osd/osd-button-dvd.png</texturenofocus>
+				<texturefocus>OSD/osd-button-dvd-focus.png</texturefocus>
+				<texturenofocus>OSD/osd-button-dvd.png</texturenofocus>
 				<onleft>800</onleft>
 				<onright>700</onright>
 				<ondown>606</ondown>

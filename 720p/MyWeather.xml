@@ -34,11 +34,6 @@
 				<texture flipy="false">overlays/weatherOverlay.png</texture>
 				<include>transition2</include>
 			</control>
-			<control type="image" id="1">
-				<include>screentype</include>
-				<texture flipy="false">overlays/weatherOverlay.png</texture>
-				<include>transition2</include>
-			</control>
 		</control>
         <!-- location -->
         <control type="label">

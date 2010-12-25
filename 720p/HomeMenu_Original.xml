@@ -10,18 +10,11 @@
 			<onleft>300</onleft>
 			<orientation>vertical</orientation>
 			<scrolltime>150</scrolltime>
-			<visible allowhiddenfocus="true">![ControlGroup(1100).HasFocus() | ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus()]</visible>		
+			<visible allowhiddenfocus="true">![ControlGroup(1100).HasFocus() | ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus()]</visible>
+            <!--<animation effect="fade" start="100" end="20" time="350" condition="Control.HasFocus(8001)">Conditional</animation>-->		
 			<include>homeMenuToggle</include>
 			<include>homeMenusLayout</include>
 			<content>
-				<!--item id="101">
-					<label>Recently Added Movies</label>
-					<onclick>ActivateWindow(10024,plex://$INFO[Skin.String(macname)].local./library/sections/1/recentlyAdded/,return)</onclick>
-				</item-->
-				<!--item id="102">
-					<label>Recently Added TV Shows</label>
-					<onclick>ActivateWindow(10024,plex://CHANGEME.local./library/sections/2/recentlyAdded/,return)</onclick>
-				</item-->
 				<item id="99">
 					<label>31976</label>
 					<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
@@ -33,21 +26,15 @@
 				</item>
                 <item id="2">
 					<label>iTunes</label>
-					<onclick>ActivateWindow(10501,http://127.0.0.1:32400/music/iTunes,return)</onclick>
-					<visible>Skin.HasSetting(iTunesHome)</visible>
-				</item>
-				<!--<item id="2">
-					<label>iTunes</label>
 					<onclick>SetFocus(1120)</onclick>
 					<visible>Skin.HasSetting(iTunesHome)</visible>
-				</item>-->
-				<item id="4">
-					<label>$LOCALIZE[31006]</label>
+				</item>
+				<!--<item id="4">
+                    <label>$LOCALIZE[31006]</label>
 					<onclick>SetFocus(1140)</onclick>
 					<visible>!Skin.HasSetting(homemenuAccessories)</visible>
-				</item>
-				<!--<item id="6">-->
-                <item id="3">
+				</item>-->
+                <item id="4">
 					<label>$LOCALIZE[0]</label>
 						<onclick>ActivateWindow(Programs)</onclick>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
@@ -102,10 +89,8 @@
 					<visible>Player.HasVideo + Skin.HasSetting(homemenuNP)</visible>
 					<label2>$INFO[VideoPlayer.TVShowTitle,,: ]$INFO[VideoPlayer.Artist,, - ]$INFO[VideoPlayer.Title]</label2>
 				</item>
-				
 			</content>
 		</control>
 		<include>homeSubMenu_Original</include>
-		<include>homeRecent</include>
 	</include>
 </includes>

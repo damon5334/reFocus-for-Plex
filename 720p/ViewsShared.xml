@@ -497,7 +497,7 @@
 					<width>64</width>
 					<height>64</height>
 					<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-					<texture>osd/osd-button-play-focus.png</texture>
+					<texture>OSD/osd-button-play-focus.png</texture>
 				</control>
 				<control type="textbox">
 					<posx>10</posx>

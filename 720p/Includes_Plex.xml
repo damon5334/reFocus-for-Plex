@@ -9,7 +9,7 @@
         <height>330</height>
         <info>MusicPlayer.Cover</info>
         <aspectratio>stretch</aspectratio>
-        <texture flipy="true" diffuse="frames/wideframemaskreflect.png"/>
+        <texture flipy="true" diffuse="frames/wideFrameMaskReflect.png"/>
       </control>
       <control type="image">
         <posx>-20</posx>
@@ -17,20 +17,20 @@
         <width>371</width>
         <height>371</height>
         <aspectratio>stretch</aspectratio>
-        <texture>frames/albumframe.png</texture>
+        <texture>frames/albumFrame.png</texture>
       </control>
       <control type="image">
         <width>330</width>
         <height>330</height>
         <info>MusicPlayer.Cover</info>
         <aspectratio>stretch</aspectratio>
-        <texture diffuse="frames/albumframemask.png"/>
+        <texture diffuse="frames/albumFrameMask.png"/>
       </control>
       <!--control type="image">
         <width>330</width>
         <height>330</height>
         <aspectratio>stretch</aspectratio>
-        <texture>frames/albumframegloss.png</texture>
+        <texture>frames/albumFrameGloss.png</texture>
       </control-->
     </control>
   </include>
@@ -45,13 +45,13 @@
         <height>264</height>
         <info>MusicPlayer.NextNewCover</info>
         <aspectratio>stretch</aspectratio>
-        <texture flipy="true" diffuse="frames/wideframemaskreflect.png"/>
+        <texture flipy="true" diffuse="frames/wideFrameMaskReflect.png"/>
       </control>
       <control type="image">
         <width>264</width>
         <height>264</height>
         <aspectratio>stretch</aspectratio>
-        <texture>frames/albumframe.png</texture>
+        <texture>frames/albumFrame.png</texture>
         <visible>MusicPlayer.HasNext</visible>
       </control>
       <control type="image">
@@ -60,7 +60,7 @@
         <info>MusicPlayer.NextNewCover</info>
         <aspectratio>stretch</aspectratio>
         <visible>MusicPlayer.HasNext</visible>
-        <texture diffuse="frames/albumframemasksmall.png"/>
+        <texture diffuse="frames/albumFrameMaskSmall.png"/>
       </control>
     </control>
   </include>

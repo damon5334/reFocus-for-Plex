@@ -229,7 +229,7 @@
 		<posy>320</posy>
 		<width>50</width>
 		<height>50</height>
-		<texture>views/scrollleftindicator.png</texture>
+		<texture>views/scrollLeftIndicator.png</texture>
 		<visible>Control.HasFocus(300)</visible>
 	</control>
 
@@ -248,7 +248,7 @@
 		<posy>320</posy>
 		<width>50</width>
 		<height>50</height>
-		<texture>views/scrollrightindicator.png</texture>
+		<texture>views/scrollRightIndicator.png</texture>
 		<visible>Control.HasFocus(9000)</visible>
 	</control-->
 

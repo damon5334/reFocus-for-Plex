@@ -1,7 +1,7 @@
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
-	<controls>
+        <allowoverlay>no</allowoverlay>
+    <controls>
 	
 	<include>startupSlides</include>
 		
@@ -69,14 +69,14 @@
 			</control>
 		</control>
 		
-		<!--control type="image">
-			<posx>566</posx>
+		<control type="image">
+			<posx>576</posx>
 			<posy>615</posy>
-			<width>128</width>
-			<height>86</height>
-			<texture>logos/xbmclogo2.png</texture>
+			<width>123</width>
+			<height>73</height>
+			<texture>logos/plexlogo.png</texture>
 			<include>fadeinout</include>
-		</control-->
+		</control>
 		
 	</controls>
 </window>

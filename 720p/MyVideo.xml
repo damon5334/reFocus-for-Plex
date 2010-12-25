@@ -43,7 +43,7 @@
 				<posy>173</posy>
 				<width>450</width>
 				<height>450</height>
-				<texture>frames/albumframe.png</texture>
+				<texture>frames/albumFrame.png</texture>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				<include>thumbFadeTime</include>
 				<visible>Container.Content(plugincontent)</visible>
@@ -54,7 +54,7 @@
 				<posy>200</posy>
 				<width>396</width>
 				<height>396</height>
-				<texture diffuse="frames/albumframemask.png" fallback="thumbs/actor.png">$INFO[ListItem.Thumb]</texture>
+				<texture diffuse="frames/albumFrameMask.png" fallback="thumbs/actor.png">$INFO[ListItem.Thumb]</texture>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				<include>thumbFadeTime</include>
 				<visible>Container.Content(plugincontent)</visible>
@@ -785,7 +785,7 @@
 			<width>1320</width>
 			<height>215</height>
 			<visible>!IsEmpty(ListItem.Title) + [Control.IsVisible(53) + Control.HasFocus(8000)] | [Control.IsVisible(56) + !Control.HasFocus(8000)] + !ControlGroup(300).HasFocus()</visible>
-			<texture border="0,0,0,15">osd/fullscreenInfo.png</texture>
+			<texture border="0,0,0,15">OSD/fullscreenInfo.png</texture>
 			<animation effect="slide" start="0,600" end="0,0" easing="Out" tween="Quadratic" time="350">Visible</animation>
 			<animation effect="slide" start="0,0" end="0,600" easing="Out" tween="Quadratic" time="350">Hidden</animation>
 			<include>transition2</include>

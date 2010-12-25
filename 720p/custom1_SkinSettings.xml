@@ -223,13 +223,13 @@
 				<selected>Skin.HasSetting(iTunesHome)</selected>
 				<include>settingsButton</include>
 			</control>
-			<control type="radiobutton" id="201">
+			<!--<control type="radiobutton" id="201">
 				<description>show accessories entry</description>
 				<label>31955</label>
 				<onclick>Skin.ToggleSetting(homemenuAccessories)</onclick>
 				<selected>!Skin.HasSetting(homemenuAccessories)</selected>
 				<include>settingsButton</include>
-			</control>
+			</control>-->
 			<control type="radiobutton" id="202">
 				<description>show favourites entry</description>
 				<label>31959</label>
@@ -619,7 +619,7 @@
 				<include>settingsButton</include>
 			</control>
             <control type="radiobutton" id="616">
-				<label>Only Use HD Flag on Focused Item (thumbnails view)</label>
+				<label>-Only Use HD Flag on Focused Item (thumbnails view)</label>
 				<onclick>Skin.ToggleSetting(onlyfocusflagpanel)</onclick>
 				<selected>!Skin.HasSetting(onlyfocusflagpanel)</selected>
 				<include>settingsButton</include>
