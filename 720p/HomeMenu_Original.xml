@@ -11,7 +11,7 @@
 			<orientation>vertical</orientation>
 			<scrolltime>150</scrolltime>
 			<visible allowhiddenfocus="true">![ControlGroup(1100).HasFocus() | ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus()]</visible>
-            <!--<animation effect="fade" start="100" end="20" time="350" condition="Control.HasFocus(8001)">Conditional</animation>-->		
+            <animation effect="fade" start="100" end="20" time="350" condition="Control.HasFocus(8001)">Conditional</animation>		
 			<include>homeMenuToggle</include>
 			<include>homeMenusLayout</include>
 			<content>

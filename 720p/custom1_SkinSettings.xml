@@ -187,6 +187,15 @@
 				<selected>Skin.HasSetting(blueoriginalhome)</selected>
 				<include>settingsButton</include>
 			</control>
+<!-- Added Capitalization option: Courtesy of Se.bastian -->
+            <control type="radiobutton" id="109">
+                <description>use capitalisation</description>
+                <label>Use normal capitalisation for text</label>
+                <onclick>Skin.ToggleSetting(usecapitalisation)</onclick>
+                <selected>Skin.HasSetting(usecapitalisation)</selected>
+                <include>settingsButton</include>
+            </control>
+            
 			<!--control type="button" id="109">
 				<description>Original Home Screen</description>
 				<label>Set Mac Name for Recently Added</label>

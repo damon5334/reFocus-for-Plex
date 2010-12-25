@@ -20,12 +20,24 @@
 			<visible>!Container.Content(plugincontent)</visible>
 	
 			<itemlayout condition="[IsEmpty(Container.FolderPath) | Window.IsActive(videofiles)] + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | Container.Content(plugincontent)]" width="625" height="40">
+<!-- Added Capitalization option: Courtesy of Se.bastian -->
+                <!-- original small caps -->
 				<control type="label">
 					<posx>40</posx>
 					<width>500</width>
 					<label>$INFO[ListItem.Label]</label>
 					<font>bigLow</font>
 					<include>listMenu</include>
+					<visible>!Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+				<!-- use capitalisation -->
+				<control type="label">
+					<posx>40</posx>
+					<width>500</width>
+					<label>$INFO[ListItem.Label]</label>
+					<font>bigLow1</font>
+					<include>listMenu</include>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label">
 					<posx>560</posx>
@@ -44,12 +56,24 @@
 					<height>100</height>
 					<texture border="0,30,0,30">views/list-focus.png</texture>
 				</control>
+<!-- Added Capitalization option: Courtesy of Se.bastian -->
+				<!-- original small caps -->
 				<control type="label">
 					<posx>40</posx>
 					<width>500</width>
 					<label>$INFO[ListItem.Label]</label>
 					<font>bigLow</font>
-					<include>listMenuFocus</include>
+					<include>listMenu</include>
+					<visible>!Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+				<!-- use capitalisation -->
+				<control type="label">
+					<posx>40</posx>
+					<width>500</width>
+					<label>$INFO[ListItem.Label]</label>
+					<font>bigLow1</font>
+					<include>listMenu</include>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label">
 					<posx>560</posx>
@@ -62,12 +86,24 @@
 			</focusedlayout>
 	
 			<itemlayout condition="Container.Content(movies)" width="560" height="65">
+<!-- Added Capitalization option: Courtesy of Se.bastian -->
+				<!-- original small caps -->
 				<control type="label">
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.Title]</label>
 					<font>bigLow</font>
 					<include>listMenu</include>
+					<visible>!Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+				<!-- use capitalisation -->
+				<control type="label">
+					<posx>40</posx>
+					<width>440</width>
+					<label>$INFO[ListItem.Title]</label>
+					<font>bigLow1</font>
+					<include>listMenu</include>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="image">
 					<posy>-28</posy>
@@ -130,12 +166,24 @@
 					<visible>!ControlGroup(300).HasFocus</visible>
 					<include>fadeinout</include>
 				</control>
+<!-- Added Capitalization option: Courtesy of Se.bastian -->
+                <!-- original small caps -->
 				<control type="label">
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.Title]</label>
 					<font>bigLow</font>
 					<include>listMenuFocus</include>
+					<visible>!Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+				<!-- use capitalisation -->
+				<control type="label">
+					<posx>40</posx>
+					<width>440</width>
+					<label>$INFO[ListItem.Title]</label>
+					<font>bigLow1</font>
+					<include>listMenuFocus</include>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label">
 					<posx>40</posx>
@@ -199,12 +247,24 @@
 			</focusedlayout>
 	
 			<itemlayout condition="Container.Content(tvshows)" width="560" height="69">
+<!-- Added Capitalization option: Courtesy of Se.bastian -->
+				<!-- original small caps -->
 				<control type="label">
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.Title]</label>
 					<font>bigLow</font>
 					<include>listMenu</include>
+					<visible>!Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+				<!-- use capitalisation -->
+				<control type="label">
+					<posx>40</posx>
+					<width>440</width>
+					<label>$INFO[ListItem.Title]</label>
+					<font>bigLow1</font>
+					<include>listMenu</include>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label">
 					<posx>40</posx>
@@ -251,12 +311,24 @@
 					<visible>!ControlGroup(300).HasFocus</visible>
 					<include>fadeinout</include>
 				</control>
+<!-- Added Capitalization option: Courtesy of Se.bastian -->
+				<!-- original small caps -->
 				<control type="label">
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.Title]</label>
 					<font>bigLow</font>
 					<include>listMenuFocus</include>
+					<visible>!Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+				<!-- use capitalisation -->
+				<control type="label">
+					<posx>40</posx>
+					<width>440</width>
+					<label>$INFO[ListItem.Title]</label>
+					<font>bigLow1</font>
+					<include>listMenuFocus</include>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label">
 					<posx>40</posx>
@@ -301,12 +373,24 @@
 			</focusedlayout>
 			
 			<itemlayout condition="Container.Content(seasons)" width="560" height="69">
+<!-- Added Capitalization option: Courtesy of Se.bastian -->
+				<!-- original small caps -->
 				<control type="label">
 					<posx>40</posx>
 					<width>540</width>
 					<label>$INFO[ListItem.Label]</label>
 					<font>bigLow</font>
 					<include>listMenu</include>
+					<visible>!Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+				<!-- use capitalisation -->
+				<control type="label">
+					<posx>40</posx>
+					<width>540</width>
+					<label>$INFO[ListItem.Label]</label>
+					<font>bigLow1</font>
+					<include>listMenu</include>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label">
 					<posx>40</posx>
@@ -336,12 +420,24 @@
 					<visible>!ControlGroup(300).HasFocus</visible>
 					<include>fadeinout</include>
 				</control>
+<!-- Added Capitalization option: Courtesy of Se.bastian -->
+				<!-- original small caps -->
 				<control type="label">
 					<posx>40</posx>
 					<width>540</width>
 					<label>$INFO[ListItem.Label]</label>
 					<font>bigLow</font>
 					<include>listMenuFocus</include>
+					<visible>!Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+				<!-- use capitalisation -->
+				<control type="label">
+					<posx>40</posx>
+					<width>540</width>
+					<label>$INFO[ListItem.Label]</label>
+					<font>bigLow1</font>
+					<include>listMenuFocus</include>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label">
 					<posx>40</posx>
@@ -361,12 +457,24 @@
 			</focusedlayout>
 			
 			<itemlayout condition="Container.Content(plugincontent)" width="560" height="69">
+<!-- Added Capitalization option: Courtesy of Se.bastian -->
+				<!-- original small caps -->
 				<control type="label">
 					<posx>40</posx>
 					<width>540</width>
 					<label>$INFO[ListItem.Label]</label>
 					<font>bigLow</font>
 					<include>listMenu</include>
+					<visible>!Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+				<!-- use capitalisation -->
+				<control type="label">
+					<posx>40</posx>
+					<width>540</width>
+					<label>$INFO[ListItem.Label]</label>
+					<font>bigLow1</font>
+					<include>listMenu</include>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label">
 					<posx>40</posx>
@@ -396,12 +504,24 @@
 					<visible>!ControlGroup(300).HasFocus</visible>
 					<include>fadeinout</include>
 				</control>
+<!-- Added Capitalization option: Courtesy of Se.bastian -->
+				<!-- original small caps -->
 				<control type="label">
 					<posx>40</posx>
 					<width>540</width>
 					<label>$INFO[ListItem.Label]</label>
 					<font>bigLow</font>
 					<include>listMenuFocus</include>
+					<visible>!Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+				<!-- use capitalisation -->
+				<control type="label">
+					<posx>40</posx>
+					<width>540</width>
+					<label>$INFO[ListItem.Label]</label>
+					<font>bigLow1</font>
+					<include>listMenuFocus</include>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label">
 					<posx>40</posx>
@@ -422,12 +542,24 @@
 			</focusedlayout>
 	
 			<itemlayout condition="Container.Content(episodes)" width="560" height="69">
+<!-- Added Capitalization option: Courtesy of Se.bastian -->
+				<!-- original small caps -->
 				<control type="label">
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.Title]</label>
 					<font>bigLow</font>
 					<include>listMenu</include>
+					<visible>!Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+				<!-- use capitalisation -->
+				<control type="label">
+					<posx>40</posx>
+					<width>440</width>
+					<label>$INFO[ListItem.Title]</label>
+					<font>bigLow1</font>
+					<include>listMenu</include>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<!--control type="label">
 					<posx>40</posx>
@@ -482,12 +614,24 @@
 					<visible>!ControlGroup(300).HasFocus</visible>
 					<include>fadeinout</include>
 				</control>
+<!-- Added Capitalization option: Courtesy of Se.bastian -->
+				<!-- original small caps -->
 				<control type="label">
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.Title]</label>
 					<font>bigLow</font>
 					<include>listMenuFocus</include>
+					<visible>!Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+				<!-- use capitalisation -->
+				<control type="label">
+					<posx>40</posx>
+					<width>440</width>
+					<label>$INFO[ListItem.Title]</label>
+					<font>bigLow1</font>
+					<include>listMenuFocus</include>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<!--control type="label">
 					<posx>40</posx>
@@ -532,6 +676,8 @@
 			</focusedlayout>
 	
 			<itemlayout condition="Container.Content(musicvideos)" width="560" height="65">
+<!-- Added Capitalization option: Courtesy of Se.bastian -->
+                <!-- original small caps -->
 				<control type="label">
 					<posx>40</posx>
 					<posy>6</posy>
@@ -539,6 +685,7 @@
 					<label>$INFO[ListItem.Title]</label>
 					<font>bigLow</font>
 					<include>listMenu</include>
+                    <visible>!Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label">
 					<posx>40</posx>
@@ -547,7 +694,26 @@
 					<label>$INFO[ListItem.Label]</label>
 					<font>bigLow</font>
 					<include>listMenu</include>
-					<visible>IsEmpty(ListItem.Title)</visible>
+					<visible>IsEmpty(ListItem.Title) + !Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+                <!-- use capitalisation -->
+                <control type="label">
+					<posx>40</posx>
+					<posy>6</posy>
+					<width>540</width>
+					<label>$INFO[ListItem.Title]</label>
+					<font>bigLow1</font>
+					<include>listMenu</include>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+                <control type="label">
+					<posx>40</posx>
+					<posy>6</posy>
+					<width>540</width>
+					<label>$INFO[ListItem.Label]</label>
+					<font>bigLow1</font>
+					<include>listMenu</include>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label">
 					<posx>40</posx>
@@ -568,6 +734,8 @@
 					<visible>!ControlGroup(300).HasFocus</visible>
 					<include>fadeinout</include>
 				</control>
+<!-- Added Capitalization option: Courtesy of Se.bastian -->
+                <!-- original small caps -->
 				<control type="label">
 					<posx>40</posx>
 					<posy>6</posy>
@@ -575,6 +743,17 @@
 					<label>$INFO[ListItem.Title]</label>
 					<font>bigLow</font>
 					<include>listMenuFocus</include>
+                    <visible>!Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+                <!-- use capitalisation -->
+				<control type="label">
+					<posx>40</posx>
+					<posy>6</posy>
+					<width>540</width>
+					<label>$INFO[ListItem.Title]</label>
+					<font>bigLow1</font>
+					<include>listMenuFocus</include>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label">
 					<posx>40</posx>
@@ -597,12 +776,14 @@
 			</focusedlayout>
 	
 			<itemlayout condition="Container.Content(albums)" width="560" height="65">
+                <!-- original small caps -->
 				<control type="label">
 					<posx>40</posx>
 					<width>540</width>
 					<label>$INFO[ListItem.Album]</label>
 					<font>bigLow</font>
 					<include>listMenu</include>
+                    <visible>!Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label">
 					<posx>40</posx>
@@ -610,7 +791,24 @@
 					<label>$INFO[ListItem.Label]</label>
 					<font>bigLow</font>
 					<include>listMenu</include>
-					<visible>IsEmpty(ListItem.Album)</visible>
+					<visible>IsEmpty(ListItem.Album) + !Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+                <!-- use capitalisation -->
+				<control type="label">
+					<posx>40</posx>
+					<width>540</width>
+					<label>$INFO[ListItem.Album]</label>
+					<font>bigLow1</font>
+					<include>listMenu</include>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+                <control type="label">
+					<posx>40</posx>
+					<width>540</width>
+					<label>$INFO[ListItem.Label]</label>
+					<font>bigLow1</font>
+					<include>listMenu</include>
+					<visible>Skin.HasSetting(usecapitalisation) + IsEmpty(ListItem.Album)</visible>
 				</control>
 				<control type="label">
 					<posx>40</posx>
@@ -631,12 +829,14 @@
 					<visible>!ControlGroup(300).HasFocus</visible>
 					<include>fadeinout</include>
 				</control>
+                <!-- original small caps -->
 				<control type="label">
 					<posx>40</posx>
 					<width>540</width>
 					<label>$INFO[ListItem.Album]</label>
 					<font>bigLow</font>
 					<include>listMenuFocus</include>
+                    <visible>!Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label">
 					<posx>40</posx>
@@ -644,7 +844,24 @@
 					<label>$INFO[ListItem.Label]</label>
 					<font>bigLow</font>
 					<include>listMenuFocus</include>
-					<visible>IsEmpty(ListItem.Album)</visible>
+					<visible>IsEmpty(ListItem.Album) + !Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+                <!-- use capitalisation -->
+				<control type="label">
+					<posx>40</posx>
+					<width>540</width>
+					<label>$INFO[ListItem.Album]</label>
+					<font>bigLow1</font>
+					<include>listMenu</include>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+                <control type="label">
+					<posx>40</posx>
+					<width>540</width>
+					<label>$INFO[ListItem.Label]</label>
+					<font>bigLow1</font>
+					<include>listMenu</include>
+					<visible>Skin.HasSetting(usecapitalisation) + IsEmpty(ListItem.Album)</visible>
 				</control>
 				<control type="label">
 					<posx>40</posx>
@@ -801,6 +1018,8 @@
 					<font>bigLow</font>
 					<textcolor>Color1</textcolor>
 				</control-->
+<!-- Added Capitalization option: Courtesy of Se.bastian -->
+                <!-- original small caps -->
 				<control type="label" id="1">
 					<posx>270</posx>
 					<posy>40</posy>
@@ -808,6 +1027,7 @@
 					<label>$INFO[ListItem.Title]</label>
 					<font>bigLow</font>
 					<textcolor>Color1</textcolor>
+                    <visible>!Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label" id="1">
 					<posx>270</posx>
@@ -816,7 +1036,26 @@
 					<label>$INFO[ListItem.Label]</label>
 					<font>bigLow</font>
 					<textcolor>Color1</textcolor>
-					<visible>IsEmpty(ListItem.Title)</visible>
+					<visible>IsEmpty(ListItem.Title) + !Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+                <!-- use capitalisation -->
+                <control type="label" id="1">
+					<posx>270</posx>
+					<posy>40</posy>
+					<width>770</width>
+					<label>$INFO[ListItem.Title]</label>
+					<font>bigLow1</font>
+					<textcolor>Color1</textcolor>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+				<control type="label" id="1">
+					<posx>270</posx>
+					<posy>40</posy>
+					<width>770</width>
+					<label>$INFO[ListItem.Label]</label>
+					<font>bigLow1</font>
+					<textcolor>Color1</textcolor>
+					<visible>IsEmpty(ListItem.Title) + Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label" id="1">
 					<posx>270</posx>
@@ -911,6 +1150,7 @@
 					<font>bigLow</font>
 					<textcolor>Focused</textcolor>
 				</control-->
+				<!-- original small caps -->
 				<control type="label" id="1">
 					<posx>270</posx>
 					<posy>40</posy>
@@ -918,6 +1158,7 @@
 					<label>$INFO[ListItem.Title]</label>
 					<font>bigLow</font>
 					<textcolor>Focused</textcolor>
+					<visible>!Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label" id="1">
 					<posx>270</posx>
@@ -926,7 +1167,26 @@
 					<label>$INFO[ListItem.Label]</label>
 					<font>bigLow</font>
 					<textcolor>Focused</textcolor>
-					<visible>IsEmpty(ListItem.Title)</visible>
+					<visible>IsEmpty(ListItem.Title) + !Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+				<!-- use capitalisation -->
+				<control type="label" id="1">
+					<posx>270</posx>
+					<posy>40</posy>
+					<width>770</width>
+					<label>$INFO[ListItem.Title]</label>
+					<font>bigLow1</font>
+					<textcolor>Focused</textcolor>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+				<control type="label" id="1">
+					<posx>270</posx>
+					<posy>40</posy>
+					<width>770</width>
+					<label>$INFO[ListItem.Label]</label>
+					<font>bigLow1</font>
+					<textcolor>Focused</textcolor>
+					<visible>IsEmpty(ListItem.Title) + Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label" id="1">
 					<posx>270</posx>
@@ -1106,6 +1366,7 @@
                 <include>transition2</include>
                 <include>infoDialogHide</include>
                 <include>contextMenuHide</include>
+                <!-- original small caps -->
                 <control type="textbox" id="4">
 					<posx>270</posx>
 					<posy>170</posy>
@@ -1115,7 +1376,7 @@
 					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
 					<font>mediumLow</font>
 					<include>textBox</include>
-					<visible>Control.IsVisible(51)</visible>
+					<visible>Control.IsVisible(51) + !Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 
                 <control type="textbox" id="4">
@@ -1128,7 +1389,7 @@
 					<font>mediumLow</font>
 					<textcolor>Focused</textcolor>
 					<include>textBox</include>
-					<visible>Control.IsVisible(51)</visible>
+					<visible>Control.IsVisible(51) + !Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 
                 <control type="textbox" id="4">
@@ -1140,7 +1401,7 @@
 					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
 					<font>mediumLow</font>
 					<include>textBox</include>
-					<visible>Control.IsVisible(51)</visible>
+					<visible>Control.IsVisible(51) + !Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 
                 <control type="textbox" id="4">
@@ -1152,8 +1413,54 @@
 					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
 					<font>mediumLow</font>
 					<include>textBox</include>
-					<visible>Control.IsVisible(51)</visible>
+					<visible>Control.IsVisible(51) + !Skin.HasSetting(usecapitalisation)</visible>
 				</control>
+                <!-- use capitalisation -->
+                <control type="textbox" id="4">
+                    <posx>270</posx>
+                    <posy>170</posy>
+                    <width>950</width>
+                    <height>60</height>
+                    <label>$INFO[ListItem(-1).Plot]</label>
+                    <autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+                    <font>mediumNormal</font>
+                    <include>textBox</include>
+                    <visible>Control.IsVisible(51) + Skin.HasSetting(usecapitalisation)</visible>
+                </control>
+                <control type="textbox" id="4">
+                    <posx>270</posx>
+                    <posy>317</posy>
+                    <width>950</width>
+                    <height>60</height>
+                    <label>$INFO[ListItem(0).Plot]</label>
+                    <autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+                    <font>mediumNormal</font>
+                    <textcolor>Focused</textcolor>
+                    <include>textBox</include>
+                    <visible>Control.IsVisible(51) + Skin.HasSetting(usecapitalisation)</visible>
+                </control>
+                <control type="textbox" id="4">
+                    <posx>270</posx>
+                    <posy>464</posy>
+                    <width>950</width>
+                    <height>60</height>
+                    <label>$INFO[ListItem(1).Plot]</label>
+                    <autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+                    <font>mediumNormal</font>
+                    <include>textBox</include>
+                    <visible>Control.IsVisible(51) + Skin.HasSetting(usecapitalisation)</visible>
+                </control>
+                <control type="textbox" id="4">
+                    <posx>270</posx>
+                    <posy>611</posy>
+                    <width>950</width>
+                    <height>60</height>
+                    <label>$INFO[ListItem(2).Plot]</label>
+                    <autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+                    <font>mediumNormal</font>
+                    <include>textBox</include>
+                    <visible>Control.IsVisible(51) + Skin.HasSetting(usecapitalisation)</visible>
+                </control>
 			</control>
 	</include>
 
@@ -1730,12 +2037,24 @@
 			<include>contextMenuHide</include>
 			<visible>!Window.IsActive(progressdialog) + Container.Content(tvshows)</visible>
 			<itemlayout condition="Container.Content(tvshows)" width="560" height="65">
+<!-- Added Capitalization option: Courtesy of Se.bastian -->
+				<!-- original small caps -->
 				<control type="label">
 					<posx>75</posx>
 					<width>700</width>
 					<label>$INFO[ListItem.Title]</label>
 					<font>bigLow</font>
 					<include>listMenu</include>
+					<visible>!Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+				<!-- use capitalisation -->
+				<control type="label">
+					<posx>75</posx>
+					<width>700</width>
+					<label>$INFO[ListItem.Title]</label>
+					<font>bigLow1</font>
+					<include>listMenu</include>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label">
 					<posx>75</posx>
@@ -1782,27 +2101,52 @@
 					<include>focus_Banner</include>
 					<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
 				</control>
+<!-- Added Capitalization option: Courtesy of Se.bastian -->
+				<!-- original small caps -->
 				<control type="label">
-					<posx>34</posx>
-					<posy>178</posy>
+					<posx>33</posx>
+					<posy>183</posy>
 					<label>$INFO[ListItem.TVShowTitle]</label>
 					<font>dialog1</font>
-					<textcolor>Color5</textcolor>
+					<textcolor>Color4</textcolor>
 					<align>left</align>
 					<width>1100</width>
 					<include>focus_Banner</include>
-					<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
+					<visible>!IsEmpty(ListItem.TVShowTitle) + !Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label">
 					<posx>34</posx>
-					<posy>178</posy>
-					<label>$INFO[ListItem.Label]</label>
+					<posy>182</posy>
+					<label>$INFO[ListItem.TVShowTitle]</label>
 					<font>dialog1</font>
 					<textcolor>Color1</textcolor>
 					<align>left</align>
 					<width>1100</width>
 					<include>focus_Banner</include>
-					<visible>IsEmpty(ListItem.TVShowTitle)</visible>
+					<visible>!IsEmpty(ListItem.TVShowTitle) + !Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+				<!-- use capitalisation -->
+				<control type="label">
+					<posx>33</posx>
+					<posy>183</posy>
+					<label>$INFO[ListItem.TVShowTitle]</label>
+					<font>dialog11</font>
+					<textcolor>Color4</textcolor>
+					<align>left</align>
+					<width>1100</width>
+					<include>focus_Banner</include>
+					<visible>!IsEmpty(ListItem.TVShowTitle) + Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+				<control type="label">
+					<posx>34</posx>
+					<posy>182</posy>
+					<label>$INFO[ListItem.TVShowTitle]</label>
+					<font>dialog11</font>
+					<textcolor>Color1</textcolor>
+					<align>left</align>
+					<width>1100</width>
+					<include>focus_Banner</include>
+					<visible>!IsEmpty(ListItem.TVShowTitle) + Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label">
 					<posx>34</posx>

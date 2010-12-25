@@ -123,6 +123,14 @@
 			<filename>RegularCaps.ttf</filename>
 			<size>20</size>
 		</font>
+
+<!-- Added Capitalisation option: Courtesy of Se.bastian -->
+		<font>
+			<name>mediumNormal</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+		</font>
+<!-- End Capitalisation addition -->
 		<font>
 			<name>mediumLow</name>
 			<filename>RegularLow.ttf</filename>
@@ -144,6 +152,13 @@
 			<filename>RegularLow.ttf</filename>
 			<size>28</size>
 		</font>
+<!-- Added Capitalization option: Courtesy of Se.bastian -->
+        <font>
+			<name>bigLow1</name>
+			<filename>RegularOrg.ttf</filename>
+			<size>28</size>
+		</font>
+<!-- End Capitalization addition -->
 		<font>
 			<name>bigCaps</name>
 			<filename>RegularCaps.ttf</filename>
@@ -169,6 +184,20 @@
 			<filename>RegularLow.ttf</filename>
 			<size>20</size>
 		</font>
+        
+<!-- Added Capitalisation option: Courtesy of Se.bastian -->
+        <font>
+			<name>dialog11</name>
+			<filename>Regular.ttf</filename>
+			<size>28</size>
+			<aspect>0.90</aspect>
+		</font>
+		<font>
+			<name>dialog12</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+		</font>
+<!-- End Capitalization addition -->
 
 
 <!-- osd ------------------------------------------------------>	

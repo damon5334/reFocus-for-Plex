@@ -97,7 +97,8 @@
 				<texture>views/separatorFaded.png</texture>
 				<colordiffuse>Color4</colordiffuse>
 			</control>
-
+<!-- Added Capitalisation option: Courtesy of Se.bastian -->
+            <!-- original small caps -->
 			<control type="textbox" id="8">
 				<posy>65</posy>
 				<width>1220</width>
@@ -108,6 +109,7 @@
 				<visible>!IsEmpty(VideoPlayer.PlotOutline)</visible>
 				<textcolor>Color4</textcolor>
 				<font>normalLow</font>
+                <visible>!Skin.HasSetting(usecapitalisation)</visible>
 			</control>
 			<control type="textbox" id="8">
 				<posy>65</posy>
@@ -119,7 +121,34 @@
 				<visible>IsEmpty(VideoPlayer.PlotOutline)</visible>
 				<textcolor>Color4</textcolor>
 				<font>normalLow</font>
+                <visible>!Skin.HasSetting(usecapitalisation)</visible>
 			</control>
+            <!-- use capitalisation -->
+            <control type="textbox" id="8">
+				<posy>65</posy>
+				<width>1220</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>$INFO[VideoPlayer.PlotOutline]</label>
+				<visible>!IsEmpty(VideoPlayer.PlotOutline)</visible>
+				<textcolor>Color4</textcolor>
+				<font>normal</font>
+				<visible>Skin.HasSetting(usecapitalisation)</visible>
+			</control>
+			<control type="textbox" id="8">
+				<posy>65</posy>
+				<width>1220</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>$INFO[VideoPlayer.Plot]</label>
+				<visible>IsEmpty(VideoPlayer.PlotOutline)</visible>
+				<textcolor>Color4</textcolor>
+				<font>normal</font>
+				<visible>Skin.HasSetting(usecapitalisation)</visible>
+			</control>
+<!-- End Capitalisation addition -->
 			<control type="progress" id="1">
 				<description>Progressbar</description>
 				<posy>140</posy>
