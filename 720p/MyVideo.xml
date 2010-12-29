@@ -297,13 +297,13 @@
 				<width>1080</width>
 				<label>$INFO[ListItem.Title]</label>
 				<textcolor>title</textcolor>
-				<include>Heading1</include>
+				<include>Heading</include>
 				<visible>!Container.Content(seasons)</visible>
 			</control>
 			<control type="label">
 				<width>1080</width>
 				<label>$INFO[ListItem.Label]</label>
-				<include>Heading1</include>
+				<include>Heading</include>
 				<visible>Container.Content(seasons) | IsEmpty(ListItem.Title)</visible>
 			</control>
 			<control type="label">
@@ -405,14 +405,14 @@
 				<label>$INFO[ListItem.Title]</label>
 				<textcolor>title</textcolor>
 				<align>center</align>
-				<include>Heading1</include>
+				<include>Heading</include>
 				<visible>!Container.Content(seasons)</visible>
 			</control>
 			<control type="label">
 				<include>screenwidth</include>
 				<label>$INFO[ListItem.Label]</label>
 				<align>center</align>
-				<include>Heading1</include>
+				<include>Heading</include>
 				<visible>Container.Content(seasons) | IsEmpty(ListItem.Title)</visible>
 			</control>
 			<control type="label">
@@ -468,19 +468,19 @@
 			<control type="label">
 				<width>1080</width>
 				<label>$INFO[ListItem.Title]</label>
-				<include>Heading1</include>	
+				<include>Heading</include>	
 				<visible>!IsEmpty(ListItem.Title)</visible>
 			</control>
 			<!--control type="label">
 				<width>1080</width>
 				<label>$INFO[ListItem.Label]</label>
-				<include>Heading1</include>	
+				<include>Heading</include>	
 				<visible>IsEmpty(ListItem.Title)</visible>
 			</control>
 			<control type="label">
 				<width>1080</width>
 				<label>$INFO[ListItem.TVShowTitle] • $INFO[ListItem.Title]</label>
-				<include>Heading1</include>	
+				<include>Heading</include>	
 				<visible>!IsEmpty(ListItem.Title)</visible>
 			</control-->
 			<control type="label">

@@ -190,7 +190,7 @@
 <!-- Added Capitalization option: Courtesy of Se.bastian -->
             <control type="radiobutton" id="109">
                 <description>use capitalisation</description>
-                <label>Use normal capitalisation for text</label>
+                <label>Use normal capitalization for text</label>
                 <onclick>Skin.ToggleSetting(usecapitalisation)</onclick>
                 <selected>Skin.HasSetting(usecapitalisation)</selected>
                 <include>settingsButton</include>
@@ -292,6 +292,13 @@
 				<label>31125</label>
 				<onclick>Skin.ToggleSetting(homemenuSettings)</onclick>
 				<selected>Skin.HasSetting(homemenuSettings)</selected>
+				<include>settingsButton</include>
+			</control>
+            <control type="radiobutton" id="210">
+				<description>favorites on top toggle</description>
+				<label>List Favorites on top of Home Menu</label>
+				<onclick>Skin.ToggleSetting(FavouritesonTop)</onclick>
+				<selected>Skin.HasSetting(FavouritesonTop)</selected>
 				<include>settingsButton</include>
 			</control>
 		</control>

@@ -32,7 +32,7 @@
 				<width>1080</width>
 				<label>$INFO[ListItem.Title]</label>
 				<textcolor>title</textcolor>
-				<include>Heading1</include>
+				<include>Heading</include>
 			</control>
 			<control type="label">
 				<posy>35</posy>

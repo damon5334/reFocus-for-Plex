@@ -92,25 +92,25 @@
 				<control type="label">
 					<width>1080</width>
 					<label>$INFO[ListItem.Album]</label>
-					<include>Heading1</include>	
+					<include>Heading</include>	
 					<visible>Container.Content(albums)</visible>
 				</control>
 				<control type="label">
 					<width>1080</width>
 					<label>$INFO[ListItem.Title]</label>
-					<include>Heading1</include>	
+					<include>Heading</include>	
 					<visible>Container.Content(songs)</visible>
 				</control>
 				<control type="label">
 					<width>1080</width>
 					<label>$INFO[ListItem.Artist]</label>
-					<include>Heading1</include>	
+					<include>Heading</include>	
 					<visible>Container.Content(artists)</visible>
 				</control>
 				<control type="label">
 					<width>1080</width>
 					<label>$INFO[ListItem.Label]</label>
-					<include>Heading1</include>	
+					<include>Heading</include>	
 					<visible>IsEmpty(ListItem.Artist)</visible>
 				</control>
 				<control type="label">
@@ -212,14 +212,14 @@
 					<align>left</align>
 					<label>$INFO[ListItem.Title]</label>
 					<include>screenwidth</include>
-					<include>Heading1</include>
+					<include>Heading</include>
 					<visible>!Container.Content(albums)</visible>
 				</control>
 				<control type="label">
 					<align>left</align>
 					<label>$INFO[ListItem.Album]</label>
 					<include>screenwidth</include>
-					<include>Heading1</include>
+					<include>Heading</include>
 				<visible>Container.Content(albums)</visible>
 				</control>
 				<control type="label">

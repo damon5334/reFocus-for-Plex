@@ -72,7 +72,7 @@
 		<include name="plexthemeoverlay">
 		
 			<control type="group">
-			<visible>!Skin.HasSetting(originalhome) | [Skin.HasSetting(originalhome) + Skin.HasSetting(blueoriginalhome)]</visible>
+			<visible>!Skin.HasSetting(originalhome) | [Skin.HasSetting(originalhome) + !Skin.HasSetting(blueoriginalhome)]</visible>
 	
 		<control type="image">
 			<aspectratio>scale</aspectratio>
@@ -259,12 +259,12 @@
 		<control type="label">
 			<width>1080</width>
 			<label>$INFO[ListItem.Property(Addon.Name)]</label>
-			<include>Heading1</include>
+			<include>Heading</include>
 		</control>
 		<control type="label">
 			<width>1080</width>
 			<label>$INFO[ListItem.Label]</label>
-			<include>Heading1</include>
+			<include>Heading</include>
 			<visible>IsEmpty(ListItem.Property(Addon.Name))</visible>
 		</control>
 		<control type="label">
@@ -578,12 +578,6 @@
 		<font>special3</font>
 		<textcolor>Color1</textcolor>
 	</include>
-	<include name="Heading1">
-		<height>35</height>
-		<aligny>center</aligny>
-		<font>special3</font>
-		<textcolor>Color1</textcolor>
-	</include>
 	<include name="Heading2">
 		<height>24</height>
 		<aligny>center</aligny>
@@ -604,7 +598,13 @@
 		<textcolor>Color7</textcolor>
 		<include>autoscroll-plot</include>
 	</include>
-	
+	<include name="textBoxCaps">
+		<aligny>top</aligny>
+		<font>normal</font>
+		<textcolor>Color7</textcolor>
+		<include>autoscroll-plot</include>
+	</include>
+    
 	<include name="infoDialogMeta">
 		<height>22</height>
 		<aligny>center</aligny>

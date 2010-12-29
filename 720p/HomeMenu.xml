@@ -5,9 +5,9 @@
 
 		<control type="fixedlist" id="300">
 			<posx>365</posx>
-            <posy>65</posy>
+            <posy>-25</posy>
 			<width>900</width>
-            <height>605</height>
+            <height>750</height>
 			<onup>-</onup>
 			<ondown>-</ondown>
 			<onleft>9000</onleft>
@@ -18,49 +18,73 @@
 			<scrolltime>250</scrolltime>
 			<include>transition2</include>
 			<animation effect="fade" start="100" end="20" time="350" condition="Control.HasFocus(9000) | Control.HasFocus(1110) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
-		<itemlayout width="560" height="65">
+		<itemlayout width="560" height="230">
 			<control type="group">
                 <posx>5</posx>
                 <animation effect="fade" start="100" end="90" time="350" condition="true">Conditional</animation>
                 <animation effect="zoom" start="100" end="80" time="0" center="auto" condition="true">Conditional</animation>
-				<!-- original small caps -->
+				<control type="image">
+					<posx>1</posx>
+					<posy>0</posy>
+					<width>836</width>
+					<height>295</height>
+					<include>dialogWindow</include>
+					<include>focus_Banner</include>
+				</control>
+                <control type="image">
+					<posx>20</posx>
+					<posy>17</posy>
+					<width>799</width>
+					<height>200</height>
+					<texture diffuse="frames/homemask.png" fallback="thumbs/banner.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<aspectratio scalediffuse="false" align="top">scale</aspectratio>
+					<include>focus_Banner</include>
+				</control>
+                <control type="image">
+					<posx>19</posx>
+					<posy>217</posy>
+					<width>800</width>
+					<include>dialogSeparator</include>
+					<include>focus_Banner</include>
+				</control>
+                <!-- original small caps -->
                 <control type="label">
-					<posx>784</posx>
-                    <posy>0</posy>
-					<width>700</width>
-					<label>$INFO[ListItem.Title]</label>
-                    <font>bigLow</font>
-                    <align>right</align>
+					<posx>34</posx>
+                    <posy>230</posy>
+					<label>$INFO[ListItem.Label]</label>
+                    <font>dialog1</font>
                     <textcolor>Color1</textcolor>
-					<include>listMenu</include>
+                    <align>left</align>
+                    <width>1100</width>
+					<include>focus_Banner</include>
                     <visible>!Skin.HasSetting(usecapitalisation)</visible>
 				</control>
                 <!-- use capitalisation -->
                 <control type="label">
-					<posx>784</posx>
-                    <posy>0</posy>
-					<width>700</width>
-					<label>$INFO[ListItem.Title]</label>
+					<posx>34</posx>
+                    <posy>230</posy>
+					<label>$INFO[ListItem.Label]</label>
                     <font>bigLow1</font>
-                    <align>right</align>
                     <textcolor>Color1</textcolor>
-					<include>listMenu</include>
+                    <align>left</align>
+                    <width>1100</width>
+					<include>focus_Banner</include>
                     <visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
                 <control type="label">
-					<posx>784</posx>
-					<posy>23</posy>
-					<width>700</width>
-					<label>$INFO[ListItem.Label2]</label>
-                    <font>smallCaps</font>
+					<posx>804</posx>
+					<posy>235</posy>
+                    <label>$INFO[ListItem.Label2]</label>
+                    <font>mediumCaps</font>
+                    <textcolor>Color4</textcolor>
                     <align>right</align>
-					<textcolor>Color4</textcolor>
-                    <include>listMenu</include>
+					<width>800</width>
+					<include>focus_Banner</include>
 				</control>
             </control>
 		</itemlayout>
     <!-- Focused Item -->
-        <focusedlayout width="560" height="290">
+        <focusedlayout width="560" height="230">
 			<control type="group">
 			<animation effect="zoom" start="100" end="82" time="0" center="auto" condition="true">Conditional</animation>
                 <control type="image">
@@ -90,59 +114,43 @@
 <!-- Added Capitalization option: Courtesy of Se.bastian -->
                 <!-- original small caps -->
 				<control type="label">
-					<posx>804</posx>
-                    <posy>230</posy>
-					<label>$INFO[ListItem.Label][COLOR=BLACK] • [/COLOR][COLOR=Color2]$INFO[ListItem.Label2][/COLOR]</label>
-					<font>dialog1</font>
-					<textcolor>Color1</textcolor>
-                    <shadowcolor>fff4f4f4f</shadowcolor>
-					<align>right</align>
-                    <width>1100</width>
-					<include>focus_Banner</include>
-                    <visible>!IsEmpty(ListItem.Label2) + !Skin.HasSetting(usecapitalisation)</visible>
-				</control>
-                <control type="label">
-					<posx>804</posx>
+					<posx>34</posx>
                     <posy>230</posy>
 					<label>$INFO[ListItem.Label]</label>
 					<font>dialog1</font>
 					<textcolor>Color1</textcolor>
-                    <shadowcolor>fff4f4f4f</shadowcolor>
-					<align>right</align>
+                    <align>left</align>
                     <width>1100</width>
 					<include>focus_Banner</include>
-                    <visible>IsEmpty(ListItem.Label2) + !Skin.HasSetting(usecapitalisation)</visible>
+                    <visible>!Skin.HasSetting(usecapitalisation)</visible>
 				</control>
                 <!-- use capitalisation -->
                 <control type="label">
-					<posx>804</posx>
-                    <posy>230</posy>
-					<label>$INFO[ListItem.Label][COLOR=BLACK] • [/COLOR][COLOR=Color2]$INFO[ListItem.Label2][/COLOR]</label>
-					<font>dialog11</font>
-					<textcolor>Color1</textcolor>
-                    <shadowcolor>fff4f4f4f</shadowcolor>
-					<align>right</align>
-                    <width>1100</width>
-					<include>focus_Banner</include>
-                    <visible>!IsEmpty(ListItem.Label2) + Skin.HasSetting(usecapitalisation)</visible>
-				</control>
-                <control type="label">
-					<posx>804</posx>
+					<posx>34</posx>
                     <posy>230</posy>
 					<label>$INFO[ListItem.Label]</label>
 					<font>dialog11</font>
 					<textcolor>Color1</textcolor>
-                    <shadowcolor>fff4f4f4f</shadowcolor>
-					<align>right</align>
+                    <align>left</align>
                     <width>1100</width>
 					<include>focus_Banner</include>
-                    <visible>IsEmpty(ListItem.Label2) + Skin.HasSetting(usecapitalisation)</visible>
+                    <visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
+                <control type="label">
+					<posx>804</posx>
+                    <posy>235</posy>
+					<label>$INFO[ListItem.Label2]</label>
+					<font>mediumCaps</font>
+					<textcolor>Color4</textcolor>
+                    <align>right</align>
+                    <width>800</width>
+					<include>focus_Banner</include>
 				</control>
+            </control>
 		</focusedlayout>
-			<content>
-			</content>
-		</control>
+            <content>
+            </content>
+        </control>
 	
 		<!-- Dynamic Home Edge Shadow -->
 
@@ -189,6 +197,11 @@
 			<include>homeMenuToggle</include>
 			<include>homeMenusLayout</include>
 			<content>
+                <item id="9">
+					<label>$LOCALIZE[1036]</label>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<visible>Skin.HasSetting(homemenuFavourites) + Skin.HasSetting(FavouritesonTop)</visible>
+				</item>
 				<item id="99">
 					<label>31976</label>
 					<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
@@ -239,7 +252,7 @@
 				<item id="9">
 					<label>$LOCALIZE[1036]</label>
 					<onclick>ActivateWindow(Favourites)</onclick>
-					<visible>Skin.HasSetting(homemenuFavourites)</visible>
+					<visible>Skin.HasSetting(homemenuFavourites) + !Skin.HasSetting(FavouritesonTop)</visible>
 				</item>
 				<item id="10">
 					<label>$LOCALIZE[341]</label>

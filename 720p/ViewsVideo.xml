@@ -1262,7 +1262,7 @@
 					<height>60</height>
 					<label>$INFO[ListItem(0).Plot]</label>
 					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
-					<font>mediumLow</font>
+                    <font>mediumLow</font>
 					<textcolor>Focused</textcolor>
 					<include>textBox</include>
 					<visible>Control.IsVisible(51)</visible>

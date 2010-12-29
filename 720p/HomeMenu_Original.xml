@@ -15,6 +15,11 @@
 			<include>homeMenuToggle</include>
 			<include>homeMenusLayout</include>
 			<content>
+                <item id="9">
+					<label>$LOCALIZE[1036]</label>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<visible>Skin.HasSetting(homemenuFavourites) + Skin.HasSetting(FavouritesonTop)</visible>
+				</item>
 				<item id="99">
 					<label>31976</label>
 					<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
@@ -65,7 +70,7 @@
 				<item id="9">
 					<label>$LOCALIZE[1036]</label>
 					<onclick>ActivateWindow(Favourites)</onclick>
-					<visible>Skin.HasSetting(homemenuFavourites)</visible>
+					<visible>Skin.HasSetting(homemenuFavourites) + !Skin.HasSetting(FavouritesonTop)</visible>
 				</item>
 				<item id="10">
 					<label>$LOCALIZE[341]</label>

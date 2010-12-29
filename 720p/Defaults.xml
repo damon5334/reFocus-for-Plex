@@ -1,10 +1,10 @@
 <includes>
-	<default type="image">
-		<posx>0</posx>
+	<!--<default type="image">
+        <posx>0</posx>
 		<posy>0</posy>
 		<texture>-</texture>
 		<colorkey>0</colorkey>
-	</default>
+	</default>-->
 	
 	<default type="scrollbar">
 		<width>8</width>
@@ -17,7 +17,8 @@
 	</default>
 
 	<default type="label">
-		<font>normalLow</font>
+    <!--<font>normalLow</font>-->
+        <font>normal</font>
 		<height>22</height>
 		<aligny>center</aligny>
 		<textcolor>Color1</textcolor>
@@ -37,9 +38,8 @@
 		<focusedcolor>Focused</focusedcolor>
 		<disabledcolor>Disabled</disabledcolor>
 		<selectedcolor>Selected</selectedcolor>
-		<aligny>-</aligny>
-		<textoffsety>6</textoffsety>
-		<textoffsetx>10</textoffsetx>
+		<!--<textoffsety>6</textoffsety>
+		<textoffsetx>10</textoffsetx>-->
 		<pulseonselect>false</pulseonselect>
 	</default>
 	
@@ -171,7 +171,8 @@
 	</default>
 	
 	<default type="fadelabel">
-		<font>normalLow</font>
+    <!--<font>normalLow</font>-->
+        <font>normal</font>
 		<height>22</height>
 		<aligny>center</aligny>
 		<textcolor>Color1</textcolor>
@@ -203,9 +204,9 @@
 		<lefttexture>-</lefttexture>
 		<midtexture border="10.5">dialogs/progressSlider.png</midtexture>
 		<righttexture>-</righttexture>
-		<colordiffuse>ProgressSlider</colordiffuse>
-		<overlaytexture>dialogs/progress_over.png</overlaytexture>
-	</default>
+    <!--<colordiffuse>ProgressSlider</colordiffuse>-->
+        <overlaytexture>dialogs/progress_over.png</overlaytexture>
+    </default>
 	
 	<default type="sliderex">
 		<height>40</height>

@@ -87,7 +87,7 @@
 		<control type="label">
 			<width>780</width>
 			<label>[UPPERCASE]$INFO[ListItem.Artist][/UPPERCASE]</label>
-			<include>Heading1</include>
+			<include>Heading</include>
 		</control>
 
 		<control type="grouplist" id="1000">

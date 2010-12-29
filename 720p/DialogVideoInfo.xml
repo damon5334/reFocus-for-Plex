@@ -71,24 +71,24 @@
 		<control type="label">
 			<width>780</width>
 			<label>$INFO[ListItem.Tagline]</label>
-			<include>Heading1</include>
+			<include>Heading</include>
 			<visible>Container.Content(movies)</visible>
 		</control>
 		<control type="label">
 			<width>750</width>
 			<label>$INFO[ListItem.Plot]</label>
-			<include>Heading1</include>
+			<include>Heading</include>
 			<visible>Container.Content(movies) + [IsEmpty(ListItem.Tagline) + IsEmpty(ListItem.PlotOutline) + IsEmpty(ListItem.Property(ReleaseDate))]</visible>
 		</control>
 		<control type="label">
 			<width>780</width>
-			<include>Heading1</include>
+			<include>Heading</include>
 			<label>$INFO[ListItem.Property(ReleaseDate)]</label>
 			<visible>Container.Content(movies)</visible>
 		</control>
 		<control type="label">
 			<width>780</width>
-			<include>Heading1</include>
+			<include>Heading</include>
 			<label>$INFO[ListItem.Genre]</label>
 			<visible>Container.Content(tvshows)</visible>
 		</control>
@@ -171,6 +171,14 @@
 			<height>183</height>
 			<label>$INFO[ListItem.PlotOutline]</label>
 			<include>textBox</include>
+            <visible>!Skin.HasSetting(usecapitalisation)</visible>
+		</control>
+        <control type="textbox" id="4">
+			<width>740</width>
+			<height>183</height>
+			<label>$INFO[ListItem.PlotOutline]</label>
+			<include>textBoxCaps</include>
+            <visible>Skin.HasSetting(usecapitalisation)</visible>
 		</control>
 	</control>
 
@@ -243,13 +251,13 @@
 		<control type="label">
 			<width>780</width>
 			<label>$INFO[ListItem.Title]</label>
-			<include>Heading1</include>
+			<include>Heading</include>
 			<visible>!ControlGroup(9001).HasFocus()</visible>
 		</control>
 		<control type="label">
 			<width>780</width>
 			<label>$LOCALIZE[206]</label>
-			<include>Heading1</include>
+			<include>Heading</include>
 			<visible>ControlGroup(9001).HasFocus()</visible>
 		</control>
 
@@ -317,13 +325,13 @@
 		<control type="label">
 			<width>780</width>
 			<label>$INFO[ListItem.Title]</label>
-			<include>Heading1</include>
+			<include>Heading</include>
 			<visible>!ControlGroup(9001).HasFocus()</visible>
 		</control>
 		<control type="label">
 			<width>780</width>
 			<label>$LOCALIZE[206]</label>
-			<include>Heading1</include>
+			<include>Heading</include>
 			<visible>ControlGroup(9001).HasFocus()</visible>
 		</control>
 
