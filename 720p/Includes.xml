@@ -72,7 +72,7 @@
 		<include name="plexthemeoverlay">
 		
 			<control type="group">
-			<visible>!Skin.HasSetting(originalhome) | [Skin.HasSetting(originalhome) + !Skin.HasSetting(blueoriginalhome)]</visible>
+			<visible>!Skin.HasSetting(originalhome) | [Skin.HasSetting(originalhome) + Skin.HasSetting(blueoriginalhome)]</visible>
 	
 		<control type="image">
 			<aspectratio>scale</aspectratio>
