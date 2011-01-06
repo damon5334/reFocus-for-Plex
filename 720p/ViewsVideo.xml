@@ -63,6 +63,7 @@
 					<width>500</width>
 					<label>$INFO[ListItem.Label]</label>
 					<font>bigLow</font>
+                    <textcolor>Color5</textcolor>
 					<include>listMenu</include>
 					<visible>!Skin.HasSetting(usecapitalisation)</visible>
 				</control>
@@ -72,6 +73,7 @@
 					<width>500</width>
 					<label>$INFO[ListItem.Label]</label>
 					<font>bigLow1</font>
+                    <textcolor>Color5</textcolor>
 					<include>listMenu</include>
 					<visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
@@ -81,6 +83,7 @@
 					<label>$INFO[ListItem.Label2]</label>
 					<align>right</align>
 					<font>normalCaps</font>
+                    <textcolor>Color2</textcolor>
 					<include>listMenuFocus</include>
 				</control>
 			</focusedlayout>
@@ -2104,8 +2107,8 @@
 <!-- Added Capitalization option: Courtesy of Se.bastian -->
 				<!-- original small caps -->
 				<control type="label">
-					<posx>33</posx>
-					<posy>183</posy>
+					<posx>34</posx>
+					<posy>178</posy>
 					<label>$INFO[ListItem.TVShowTitle]</label>
 					<font>dialog1</font>
 					<textcolor>Color4</textcolor>
@@ -2116,19 +2119,19 @@
 				</control>
 				<control type="label">
 					<posx>34</posx>
-					<posy>182</posy>
-					<label>$INFO[ListItem.TVShowTitle]</label>
+					<posy>178</posy>
+					<label>$INFO[ListItem.Label]</label>
 					<font>dialog1</font>
 					<textcolor>Color1</textcolor>
 					<align>left</align>
 					<width>1100</width>
 					<include>focus_Banner</include>
-					<visible>!IsEmpty(ListItem.TVShowTitle) + !Skin.HasSetting(usecapitalisation)</visible>
+					<visible>IsEmpty(ListItem.TVShowTitle) + !Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<!-- use capitalisation -->
 				<control type="label">
-					<posx>33</posx>
-					<posy>183</posy>
+					<posx>34</posx>
+					<posy>178</posy>
 					<label>$INFO[ListItem.TVShowTitle]</label>
 					<font>dialog11</font>
 					<textcolor>Color4</textcolor>
@@ -2138,15 +2141,15 @@
 					<visible>!IsEmpty(ListItem.TVShowTitle) + Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label">
-					<posx>34</posx>
-					<posy>182</posy>
-					<label>$INFO[ListItem.TVShowTitle]</label>
+					<posx>33</posx>
+					<posy>178</posy>
+					<label>$INFO[ListItem.Label]</label>
 					<font>dialog11</font>
 					<textcolor>Color1</textcolor>
 					<align>left</align>
 					<width>1100</width>
 					<include>focus_Banner</include>
-					<visible>!IsEmpty(ListItem.TVShowTitle) + Skin.HasSetting(usecapitalisation)</visible>
+					<visible>IsEmpty(ListItem.TVShowTitle) + Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 				<control type="label">
 					<posx>34</posx>

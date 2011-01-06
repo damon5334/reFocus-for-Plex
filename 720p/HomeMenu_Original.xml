@@ -1,10 +1,9 @@
 <includes>
 	<include name="HomeMenu_Original">
 		<control type="list" id="300">
-			<posy>20</posy>
-			<width>1100</width>
+            <width>1100</width>
 			<height>675</height>
-			<onup>300</onup>
+            <onup>300</onup>
 			<ondown>300</ondown>
 			<onright>8001</onright>
 			<onleft>300</onleft>

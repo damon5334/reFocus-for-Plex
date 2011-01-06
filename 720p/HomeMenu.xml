@@ -17,7 +17,7 @@
 			<focusposition>1</focusposition>
 			<scrolltime>250</scrolltime>
 			<include>transition2</include>
-			<animation effect="fade" start="100" end="20" time="350" condition="Control.HasFocus(9000) | Control.HasFocus(1110) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
+			<animation effect="fade" start="100" end="20" time="350" condition="Control.HasFocus(9000) | Control.HasFocus(1110) | Control.HasFocus(1120) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
 		<itemlayout width="560" height="230">
 			<control type="group">
                 <posx>5</posx>

@@ -626,7 +626,6 @@
 			<control type="label">
 				<posx>20</posx>
 				<posy>70</posy>
-				<posy>100</posy>
 				<width>1200</width>
 				<height>52</height>
 				<font>homeMenu</font>
@@ -646,39 +645,40 @@
 			</control>
 			<control type="image">
 				<posy>0</posy>
-				<width>950</width>
-				<height>209</height>
+				<width>375</width>
+                <height>209</height>
 				<aspectratio align="left">stretch</aspectratio>
-				<texture border="80,0,0,0">home/menuSelect.png</texture>
+				<texture border="1">home/menuSelect.png</texture>
 				<include>homeListScroll</include>
 				<visible allowhiddenfocus="true">[Container(300).HasFocus(6) | Container(300).HasFocus(12)  | Container(300).HasFocus(13)] | Window.IsActive(playercontrols)</visible>	
 			</control>
 			<control type="label">
-				<posy>70</posy>
 				<posx>20</posx>
+				<posy>70</posy>
 				<width>1200</width>
 				<height>52</height>
 				<font>homeMenu</font>
 				<align>left</align>
-				<textcolor>Color5</textcolor>
 				<label>$INFO[ListItem.Label]</label>
+                <textcolor>Color5</textcolor>
 				<visible>![Container(300).HasFocus(6) | Container(300).HasFocus(13) | Container(300).HasFocus(12)]</visible>
                 <visible>IsEmpty(Listitem.Label2)</visible>
 			</control>
 			<control type="label">
-				<posy>74</posy>
-				<posx>15</posx>
-				<width>1300</width>
+				<posx>20</posx>
+				<posy>70</posy>
+				<width>1200</width>
 				<height>52</height>
 				<font>homeMenu</font>
 				<align>left</align>
-				<textcolor>ff000000</textcolor>
-				<label>[LOWERCASE]$INFO[ListItem.Label2][/LOWERCASE]</label>
+                <label>$INFO[ListItem.Label2]</label>
+				<textcolor>Color5</textcolor>
 			</control>
 		</focusedlayout>
 	</include>
+    
 	<include name="clock">
-		<control type="group">
+        <control type="group">
 			<include>fadeinout</include>
 			<posx>1160</posx>
 			<posy>10</posy>
@@ -708,15 +708,32 @@
 			<label>[B]$INFO[System.Time][/B]</label>
 			<include>notificationTop</include>
 			<visible>![Player.HasMedia + !Skin.HasSetting(overlay)] + ![Control.IsVisible(56)] + ![Window.IsActive(133) | Window.IsActive(112) | Window.IsActive(107) | Window.IsActive(2004) | Window.IsActive(12600)] + ![Window.IsActive(2) + Control.IsVisible(52)] | Window.IsActive(111)</visible>
+            <visible>Skin.HasSetting(FanartSlideShow)</visible>
 		</control>
 		<control type="label" id="200">
 			<posx>25r</posx>
 			<label>$INFO[System.Date]</label>
 			<include>notificationBottom</include>
 			<visible>![Player.HasMedia + !Skin.HasSetting(overlay)] + ![Control.IsVisible(56)] + ![Window.IsActive(133) | Window.IsActive(112) | Window.IsActive(107) | Window.IsActive(2004) | Window.IsActive(12600)] + ![Window.IsActive(2) + Control.IsVisible(52)]</visible>
+            <visible>Skin.HasSetting(FanartSlideShow)</visible>
+		</control>
+		<control type="label" id="200">
+            <posx>25r</posx>
+			<label>[B]$INFO[System.Time][/B]</label>
+            <shadowcolor>ff000000</shadowcolor>
+			<include>notificationTop</include>
+			<visible>![Player.HasMedia + !Skin.HasSetting(overlay)] + ![Control.IsVisible(56)] + ![Window.IsActive(133) | Window.IsActive(112) | Window.IsActive(107) | Window.IsActive(2004) | Window.IsActive(12600)] + ![Window.IsActive(2) + Control.IsVisible(52)] | Window.IsActive(111)</visible>
+            <visible>!Skin.HasSetting(FanartSlideShow)</visible>
+		</control>
+		<control type="label" id="200">
+			<posx>25r</posx>
+			<label>$INFO[System.Date]</label>
+            <shadowcolor>ff000000</shadowcolor>
+			<include>notificationBottom</include>
+			<visible>![Player.HasMedia + !Skin.HasSetting(overlay)] + ![Control.IsVisible(56)] + ![Window.IsActive(133) | Window.IsActive(112) | Window.IsActive(107) | Window.IsActive(2004) | Window.IsActive(12600)] + ![Window.IsActive(2) + Control.IsVisible(52)]</visible>
+            <visible>!Skin.HasSetting(FanartSlideShow)</visible>
 		</control>
 	</include>
-	
 
 <!-- SLIDESHOWS --------------------------------------------------------------------------------->	
 	<include name="slideshows">
