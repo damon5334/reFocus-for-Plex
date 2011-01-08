@@ -34,7 +34,8 @@
 			<posx>15</posx>
 			<posy>125</posy>
 			<include>transition2</include>
-			<control type="button" id="10">
+			
+            <control type="button" id="10">
 				<description>Home Settings</description>
 				<label>$LOCALIZE[31124]</label>
 				<onfocus>Skin.SetString(SkinSettings,1)</onfocus>
@@ -43,6 +44,13 @@
 				<ondown>11</ondown>
 				<include>categoryButton</include>
 			</control>
+            <control type="image">
+                <texture border="13,6,13,6">settings/list-focusRev.png</texture>
+                <height>50</height>
+                <aspectratio align="right">stretch</aspectratio>
+                <width>325</width>
+                <visible>ControlGroup(100).HasFocus</visible>
+            </control>
             
 			<control type="button" id="11">
 				<description>Home Menu Settings</description>
@@ -54,28 +62,16 @@
 				<ondown>14</ondown>
 				<include>categoryButton</include>
 			</control>
+            <control type="image">
+                <texture border="13,6,13,6">settings/list-focusRev.png</texture>
+                <posy>42</posy>
+                <height>50</height>
+                <aspectratio align="right">stretch</aspectratio>
+                <width>325</width>
+                <visible>ControlGroup(200).HasFocus</visible>
+            </control>
             
-			<!--control type="button" id="12">
-				<description>Home Video Menu Settings</description>
-				<posy>84</posy>
-				<label>$LOCALIZE[31962]</label>
-				<onfocus>Skin.SetString(SkinSettings,3)</onfocus>
-				<onright>300</onright>
-				<onup>11</onup>
-				<ondown>13</ondown>
-				<include>categoryButton</include>
-			</control>
-			<control type="button" id="13">
-				<description>Home Music Menu Settings</description>
-				<posy>126</posy>
-				<label>$LOCALIZE[31963]</label>
-				<onfocus>Skin.SetString(SkinSettings,4)</onfocus>
-				<onright>400</onright>
-				<onup>12</onup>
-				<ondown>14</ondown>
-				<include>categoryButton</include>
-			</control-->
-			<control type="button" id="14">
+            <control type="button" id="14">
 				<description>Fanart Settings</description>
 				<posy>84</posy>
 				<label>Fanart</label>
@@ -85,8 +81,16 @@
 				<ondown>15</ondown>
 				<include>categoryButton</include>
 			</control>
-            
-			<control type="button" id="15">
+            <control type="image">
+                <texture border="13,6,13,6">settings/list-focusRev.png</texture>
+                <posy>84</posy>
+                <height>50</height>
+                <aspectratio align="right">stretch</aspectratio>
+                <width>325</width>
+                <visible>ControlGroup(500).HasFocus</visible>
+            </control>
+			
+            <control type="button" id="15">
 				<description>View Settings</description>
 				<posy>126</posy>
 				<label>$LOCALIZE[31015]</label>
@@ -96,18 +100,16 @@
 				<ondown>17</ondown>
 				<include>categoryButton</include>
 			</control>
-            
-			<!--<control type="button" id="16">
-				<description>Add-ons</description>
-				<posy>168</posy>
-				<label>$LOCALIZE[24001]</label>
-				<onfocus>Skin.SetString(SkinSettings,7)</onfocus>
-				<onright>700</onright>
-				<onup>15</onup>
-				<ondown>17</ondown>
-				<include>categoryButton</include>
-			</control>-->
-			<control type="button" id="17">
+            <control type="image">
+				<texture border="13,6,13,6">settings/list-focusRev.png</texture>
+				<posy>126</posy>
+				<height>50</height>
+				<aspectratio align="right">stretch</aspectratio>
+				<width>325</width>
+				<visible>ControlGroup(600).HasFocus</visible>
+			</control>
+			
+            <control type="button" id="17">
 				<description>Skin credits</description>
 				<posy>168</posy>
 				<label>$LOCALIZE[31909] reFocus</label>
@@ -129,8 +131,7 @@
 			<onright>9001</onright>
 			<onup>100</onup>
 			<ondown>100</ondown>
-            <!--<include>pageslide</include>-->
-			<itemgap>0</itemgap>
+            <itemgap>0</itemgap>
 			<visible>Skin.String(SkinSettings,1)</visible>
 			<include>transition2</include>
 			<control type="radiobutton" id="101">
