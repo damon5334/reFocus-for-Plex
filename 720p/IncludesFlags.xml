@@ -51,7 +51,7 @@
 			<control type="image">
 				<width>96</width>
 				<height>34</height>
-				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
+				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/type/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 			</control>
 			<control type="image">
@@ -71,7 +71,7 @@
 			<control type="image">
 				<width>96</width>
 				<height>34</height>
-				<texture>$INFO[Listitem.Property(mediaTag-aspectRatio),flags/aspect/,.png]</texture>
+				<texture>$INFO[Listitem.Property(mediaTag-aspectRatio),flags/type/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 				<visible>Skin.HasSetting(extraslideflags)</visible>
 			</control>
@@ -101,7 +101,7 @@
 			<control type="image">
 				<width>128</width>
 				<height>34</height>
-				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
+				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/type/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 			</control>-->
 			<!--control type="image">
@@ -138,7 +138,7 @@
 			<control type="image">
 				<width>96</width>
 				<height>34</height>
-				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
+				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/type/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 			</control>
 			<control type="image">
@@ -174,7 +174,7 @@
 			<height>64</height>
 			<aspectratio align="right">keep</aspectratio>
 			<colordiffuse>Color7</colordiffuse>
-			<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/tvshows/,.png]</texture>
+			<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/networks/,.png]</texture>
 			<visible>Container.Content(tvshows)</visible>
 		</control>
 		<!--control type="image">
@@ -182,7 +182,7 @@
 			<height>64</height>
 			<aspectratio align="right">keep</aspectratio>
 			<colordiffuse>Color7</colordiffuse>
-			<texture>$INFO[Listitem.studio,special://skin/flags/tvshows/,.png]</texture>
+			<texture>$INFO[Listitem.studio,special://skin/flags/networks/,.png]</texture>
 			<visible>Container.Content(tvshows)</visible>
 		</control-->
 	</include>
@@ -205,7 +205,7 @@
 				<height>64</height>
 				<aspectratio align="center">keep</aspectratio>
 				<colordiffuse>Color7</colordiffuse>
-				<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/tvshows/,.png]</texture>
+				<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/networks/,.png]</texture>
 				<visible>Container.Content(tvshows) | Container.Content(episodes)</visible>
 			</control>
 			<!--control type="image">
@@ -213,13 +213,13 @@
 				<height>64</height>
 				<aspectratio align="center">keep</aspectratio>
 				<colordiffuse>Color7</colordiffuse>
-				<texture>$INFO[Listitem.studio,special://skin/flags/tvshows/,.png]</texture>
+				<texture>$INFO[Listitem.studio,special://skin/flags/networks/,.png]</texture>
 				<visible>Container.Content(tvshows) | Container.Content(episodes)</visible>
 			</control-->
 			<control type="image">
 				<width>128</width>
 				<height>38</height>
-				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
+				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/type/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 				<include>typeFlagV</include>
 				<colordiffuse>Color7</colordiffuse>
@@ -280,7 +280,7 @@
 			<width>39</width>
 			<height>24</height>
 			<aspectratio align="right">keep</aspectratio>
-			<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
+			<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/type/,.png]</texture>
 		</control>-->
 		<!--control type="image">
 			<width>39</width>
@@ -320,7 +320,7 @@
 			<height>64</height>
 			<aspectratio align="right">keep</aspectratio>
 			<colordiffuse>Color7</colordiffuse>
-			<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/tvshows/,.png]</texture>
+			<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/networks/,.png]</texture>
 			<visible>Container.Content(tvshows)</visible>
 		</control>
 		<!--control type="image">
@@ -328,7 +328,7 @@
 			<height>64</height>
 			<aspectratio align="right">keep</aspectratio>
 			<colordiffuse>Color7</colordiffuse>
-			<texture>$INFO[Listitem.studio,special://skin/flags/tvshows/,.png]</texture>
+			<texture>$INFO[Listitem.studio,special://skin/flags/networks/,.png]</texture>
 			<visible>Container.Content(tvshows)</visible>
 		</control-->
 	</include>
@@ -374,14 +374,14 @@
 			<width>128</width>
 			<height>64</height>
 			<aspectratio align="right">keep</aspectratio>
-			<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/tvshows/,.png]</texture>
+			<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/networks/,.png]</texture>
 			<visible>Container.Content(tvshows)</visible>
 		</control>
 		<!--control type="image">
 			<width>128</width>
 			<height>64</height>
 			<aspectratio align="right">keep</aspectratio>
-			<texture fallback="flags/default.png">$INFO[Listitem.studio,special://skin/flags/tvshows/,.png]</texture>
+			<texture fallback="flags/default.png">$INFO[Listitem.studio,special://skin/flags/networks/,.png]</texture>
 			<visible>Container.Content(tvshows)</visible>
 		</control-->
 	</include>
@@ -425,7 +425,7 @@
 			<control type="image">
 				<width>96</width>
 				<height>64</height>
-				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
+				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/type/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 				<visible>Container.Content(movies)</visible>
 			</control>
@@ -471,7 +471,7 @@
 			<control type="image">
 				<width>96</width>
 				<height>64</height>
-				<texture>$INFO[Listitem.Property(mediaTag-aspectRatio),flags/aspect/,.png]</texture>
+				<texture>$INFO[Listitem.Property(mediaTag-aspectRatio),flags/type/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 				<colordiffuse>Color7</colordiffuse>
 				<visible>[Container.Content(movies) | Container.Content(episodes)]</visible>
@@ -504,7 +504,7 @@
 				<width>96</width>
 				<height>64</height>
 				<colordiffuse>Color7</colordiffuse>
-				<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/tvshows/,.png]</texture>
+				<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/networks/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 				<visible>Container.Content(tvshows)</visible>
 			</control>
@@ -512,7 +512,7 @@
 				<width>96</width>
 				<height>64</height>
 				<colordiffuse>Color7</colordiffuse>
-				<texture fallback="flags/default.png">$INFO[Listitem.studio,special://skin/flags/tvshows/,.png]</texture>
+				<texture fallback="flags/default.png">$INFO[Listitem.studio,special://skin/flags/networks/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 				<visible>Container.Content(tvshows)</visible>
 			</control-->
@@ -520,7 +520,7 @@
 				<width>72</width>
 				<height>64</height>
 				<colordiffuse>Color7</colordiffuse>
-				<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/tvshows/,.png]</texture>
+				<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/networks/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 				<visible>Container.Content(episodes)</visible>
 			</control>
@@ -528,7 +528,7 @@
 				<width>72</width>
 				<height>64</height>
 				<colordiffuse>Color7</colordiffuse>
-				<texture fallback="flags/default.png">$INFO[Listitem.studio,special://skin/flags/tvshows/,.png]</texture>
+				<texture fallback="flags/default.png">$INFO[Listitem.studio,special://skin/flags/networks/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 				<visible>Container.Content(episodes)</visible>
 			</control-->
@@ -560,7 +560,7 @@
 			<control type="image">
 				<width>128</width>
 				<height>36</height>
-				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/gallery/,.png]</texture>
+				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/type/gallery/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 				<include>typeFlagV</include>
 				<colordiffuse>Color4</colordiffuse>
@@ -608,19 +608,19 @@
 				<height>42</height>
 				<aspectratio align="right">keep</aspectratio>
 				<colordiffuse>Color4</colordiffuse>
-				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
+				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/type/,.png]</texture>
 			</control>
 			<!--control type="image">
 				<width>128</width>
 				<height>42</height>
 				<aspectratio align="right">keep</aspectratio>
 				<colordiffuse>Color4</colordiffuse>
-				<texture fallback="flags/default.png">$INFO[VideoPlayer.studio,special://skin/flags/tvshows/mono/,.png]</texture>
+				<texture fallback="flags/default.png">$INFO[VideoPlayer.studio,special://skin/flags/networks/mono/,.png]</texture>
 			</control-->
 			<control type="image">
 				<width>128</width>
 				<height>42</height>
-				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
+				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/type/,.png]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<include>typeFlagV</include>
 				<colordiffuse>Color4</colordiffuse>
@@ -785,7 +785,7 @@
 			<height>48</height>
 			<aspectratio align="center">keep</aspectratio>
 			<colordiffuse>Color7</colordiffuse>
-			<texture fallback="flags/default.png">$INFO[Listitem.studio,special://skin/flags/tvshows/,.png]</texture>
+			<texture fallback="flags/default.png">$INFO[Listitem.studio,special://skin/flags/networks/,.png]</texture>
 			<visible>!Container.OnNext + !Container.OnPrevious</visible>
 		</control>
 	</include>
@@ -795,7 +795,7 @@
 			<height>48</height>
 			<aspectratio align="right">keep</aspectratio>
 			<colordiffuse>Color7</colordiffuse>
-			<texture fallback="flags/default.png">$INFO[Listitem.studio,special://skin/flags/tvshows/,.png]</texture>
+			<texture fallback="flags/default.png">$INFO[Listitem.studio,special://skin/flags/networks/,.png]</texture>
 			<visible>!Container.OnNext + !Container.OnPrevious</visible>
 		</control>
 	</include>
@@ -805,7 +805,7 @@
 			<height>48</height>
 			<aspectratio align="right">keep</aspectratio>
 			<colordiffuse>Color4</colordiffuse>
-			<texture fallback="flags/default.png">$INFO[VideoPlayer.studio,special://skin/flags/tvshows/,.png]</texture>
+			<texture fallback="flags/default.png">$INFO[VideoPlayer.studio,special://skin/flags/networks/,.png]</texture>
 		</control>
 	</include>
 	<include name="networkFlagsBig">
@@ -814,7 +814,7 @@
 			<height>48</height>
 			<aspectratio align="right">keep</aspectratio>
 			<colordiffuse>Color1</colordiffuse>
-			<texture fallback="flags/default.png">$INFO[Listitem.studio,special://skin/flags/tvshows/,.png]</texture>
+			<texture fallback="flags/default.png">$INFO[Listitem.studio,special://skin/flags/networks/,.png]</texture>
 			<visible>!Container.OnNext + !Container.OnPrevious</visible>
 		</control>
 	</include>

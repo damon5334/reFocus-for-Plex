@@ -70,6 +70,14 @@
 					<include>contextButton</include>
 					<visible>![IsEmpty(Container.FolderPath) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(genres) | Container.Content(actors) | Container.Content(artists) | Container.Content(studios) | Container.Content(years) | Container.Content(countries) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | Container.Content(plugincontents)]</visible>
 				</control-->
+                <control type="button" id="45">
+                    <label>Plug-ins</label>
+                    <onleft>1</onleft>
+                    <onright>1</onright>
+                    <onclick>Container.SetViewMode(573)</onclick>
+                    <include>contextButton</include>
+                    <visible>Container.Content(plugincontent)</visible>
+                </control>
 				<control type="button" id="46">
 					<label>$LOCALIZE[31093]</label>
 					<onleft>1</onleft>

@@ -19,34 +19,33 @@
 			<include>PageLabel</include>
 		</control>
 		<include>FilesMenu</include>
-
-		<control type="group">
-			<posx>220</posx>
-			<posy>500</posy>
-			<include>transition3</include>
+        
+        <control type="grouplist" id="1000">
+			<posx>830</posx>
+			<posy>115</posy>
+			<itemgap>2</itemgap>
+            <include>transition3</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
 			<visible>Control.IsVisible(573)</visible>
-	
-			<control type="label">
-				<width>1080</width>
+			
+            <control type="label">
+				<width>375</width>
 				<label>$INFO[ListItem.Title]</label>
 				<textcolor>title</textcolor>
 				<include>Heading</include>
 			</control>
 			<control type="label">
-				<posy>35</posy>
-				<width>920</width>
+				<width>375</width>
 				<label>$INFO[ListItem.Year]</label>
 				<align>left</align>
-				<textcolor>Color2</textcolor>
-				<include>Heading3</include>
+                <textcolor>Color2</textcolor>
+                <include>Heading3</include>
 				<visible>!IsEmpty(ListItem.Year)</visible>
 			</control>
 			<control type="textbox" id="8">
-				<posy>60</posy>
-				<width>960</width>
-				<height>120</height>
+				<width>375</width>
+				<height>415</height>
 				<align>left</align>
 				<aligny>top</aligny>
 				<label>$INFO[ListItem.Plot]</label>
@@ -54,6 +53,5 @@
 				<font>normalLow</font>
 			</control>
 		</control>
-
 	</controls>
 </window>

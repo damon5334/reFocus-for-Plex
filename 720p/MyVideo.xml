@@ -1,7 +1,7 @@
 <window id="6">
 	<defaultcontrol always="false">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>50,51,52,53,54,55,56,57,58,59,571</views>
+	<views>50,51,52,53,54,55,56,57,58,59,571,573</views>
 	
 	<controls>
 		<include>themeBackground2</include>	
@@ -16,6 +16,7 @@
 		<include>view_PosterInfo</include>
 		<!--<include>view_BannerList</include>-->
 		<include>view_ThumbWide</include>
+        
 
 <!-- FAKE INFO TRIGGER BUTTON ------------------------------------>	
 		<control type="button" id="8000">
@@ -743,14 +744,14 @@
 				<align>left</align>
 				<width>940</width>
 			</control>
-			<control type="label">
+        <!--<control type="label">
 				<label>$INFO[ListItem.PlotOutline]</label>
 				<font>normalCaps</font>
 				<textcolor>Color1</textcolor>
 				<align>left</align>
 				<width>940</width>
 				<visible>Container.Content(movies) + IsEmpty(ListItem.Tagline)</visible>
-			</control>
+			</control>-->
 			<!--control type="label">
 				<label>$LOCALIZE[31127]</label>
 				<font>normalCaps</font>
@@ -840,6 +841,45 @@
 
 		<include>view_Gallery</include>
 
+<!-- Plugins View ---------------------------------->
+        
+        <include>view_Thumbs_Plugins</include>
+    
+        <control type="grouplist" id="1000">
+			<posx>830</posx>
+			<posy>115</posy>
+			<itemgap>2</itemgap>
+            <include>transition3</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<visible>Control.IsVisible(573)</visible>
+			
+            <control type="label">
+				<width>375</width>
+				<label>$INFO[ListItem.Title]</label>
+				<textcolor>title</textcolor>
+				<include>Heading</include>
+                <visible>Container.Content(plugincontent)</visible>
+			</control>
+			<control type="label">
+				<width>375</width>
+				<label>$INFO[ListItem.Year]</label>
+				<align>left</align>
+                <textcolor>Color2</textcolor>
+                <include>Heading3</include>
+				<visible>!IsEmpty(ListItem.Year) + Container.Content(plugincontent)</visible>
+			</control>
+			<control type="textbox" id="8">
+				<width>375</width>
+				<height>415</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>$INFO[ListItem.Plot]</label>
+				<textcolor>text</textcolor>
+				<font>normalLow</font>
+                <visible>Container.Content(plugincontent)</visible>
+			</control>
+		</control>
 
 <!-- fullscreen / expanded ------------------------->
 		<control type="image">
