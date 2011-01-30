@@ -183,7 +183,7 @@
 		<!-- Original Home Menu -->
 	
 		<control type="list" id="9000">
-			<posy>100</posy>
+			<posy>175</posy>
 			<width>1100</width>
 			<height>650</height>
 			<onup>9000</onup>

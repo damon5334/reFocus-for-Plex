@@ -625,8 +625,7 @@
 		<itemlayout width="1200" height="55">
 			<control type="label">
 				<posx>20</posx>
-				<posy>70</posy>
-				<width>1200</width>
+                <width>1200</width>
 				<height>52</height>
 				<font>homeMenu</font>
 				<align>left</align>
@@ -636,26 +635,17 @@
 		</itemlayout>			
 		<focusedlayout width="1200" height="55">
 			<control type="image">
-				<posy>0</posy>
-				<width>375</width>
+				<posx>-50</posx>
+                <posy>-70</posy>
+				<width>575</width>
 				<height>209</height>
 				<aspectratio align="left">stretch</aspectratio>
 				<texture border="1">home/menuSelect.png</texture>
 				<include>homeListScroll</include>
 			</control>
-			<control type="image">
-				<posy>0</posy>
-				<width>375</width>
-                <height>209</height>
-				<aspectratio align="left">stretch</aspectratio>
-				<texture border="1">home/menuSelect.png</texture>
-				<include>homeListScroll</include>
-				<visible allowhiddenfocus="true">[Container(300).HasFocus(6) | Container(300).HasFocus(12)  | Container(300).HasFocus(13)] | Window.IsActive(playercontrols)</visible>	
-			</control>
 			<control type="label">
 				<posx>20</posx>
-				<posy>70</posy>
-				<width>1200</width>
+                <width>1200</width>
 				<height>52</height>
 				<font>homeMenu</font>
 				<align>left</align>
@@ -666,8 +656,7 @@
 			</control>
 			<control type="label">
 				<posx>20</posx>
-				<posy>70</posy>
-				<width>1200</width>
+                <width>1200</width>
 				<height>52</height>
 				<font>homeMenu</font>
 				<align>left</align>

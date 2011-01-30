@@ -2,7 +2,7 @@
 	<include name="homeSubMenu_Original">
 	
 	<control type="group" id="1100">
-		<posy>20</posy>
+		<posy>75</posy>
 
 <!-- PLUG-IN SUBMENU ----------------------------------------------------------------------------------------------->	
 			<control type="list" id="1110">
