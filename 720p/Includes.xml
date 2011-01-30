@@ -596,13 +596,11 @@
 		<aligny>top</aligny>
 		<font>normalLow</font>
 		<textcolor>Color7</textcolor>
-		<include>autoscroll-plot</include>
 	</include>
 	<include name="textBoxCaps">
 		<aligny>top</aligny>
 		<font>normal</font>
 		<textcolor>Color7</textcolor>
-		<include>autoscroll-plot</include>
 	</include>
     
 	<include name="infoDialogMeta">

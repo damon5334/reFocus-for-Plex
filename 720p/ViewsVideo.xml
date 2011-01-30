@@ -1250,7 +1250,7 @@
 					<width>950</width>
 					<height>60</height>
 					<label>$INFO[ListItem(-1).Plot]</label>
-					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+					<autoscroll>false</autoscroll>
 					<font>mediumLow</font>
 					<include>textBox</include>
 					<visible>Control.IsVisible(51)</visible>
@@ -1264,11 +1264,11 @@
 					<width>950</width>
 					<height>60</height>
 					<label>$INFO[ListItem(0).Plot]</label>
-					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+					<autoscroll delay="10000" time="3300" repeat="10000">!Control.HasFocus(13)</autoscroll>
                     <font>mediumLow</font>
 					<textcolor>Focused</textcolor>
 					<include>textBox</include>
-					<visible>Control.IsVisible(51)</visible>
+                    <visible>Control.IsVisible(51)</visible>
 					<visible>Container.OnNext</visible>
 					<animation effect="slide" start="0,0" end="0,-147" time="150" easing="out" condition="true">Hidden</animation>
 				</control>
@@ -1279,7 +1279,7 @@
 					<width>950</width>
 					<height>60</height>
 					<label>$INFO[ListItem(1).Plot]</label>
-					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+					<autoscroll>false</autoscroll>
 					<font>mediumLow</font>
 					<include>textBox</include>
 					<visible>Control.IsVisible(51)</visible>
@@ -1293,7 +1293,7 @@
 					<width>950</width>
 					<height>60</height>
 					<label>$INFO[ListItem(2).Plot]</label>
-					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+					<autoscroll>false</autoscroll>
 					<font>mediumLow</font>
 					<include>textBox</include>
 					<visible>Control.IsVisible(51)</visible>
@@ -1312,7 +1312,7 @@
 					<width>950</width>
 					<height>60</height>
 					<label>$INFO[ListItem(-1).Plot]</label>
-					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+                    <autoscroll>false</autoscroll>
 					<font>mediumLow</font>
 					<include>textBox</include>
 					<visible>Control.IsVisible(51)</visible>
@@ -1326,11 +1326,11 @@
 					<width>950</width>
 					<height>60</height>
 					<label>$INFO[ListItem(0).Plot]</label>
-					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
-					<font>mediumLow</font>
+					<autoscroll delay="10000" time="3300" repeat="10000">!Control.HasFocus(13)</autoscroll>
+                    <font>mediumLow</font>
 					<textcolor>Focused</textcolor>
 					<include>textBox</include>
-					<visible>Control.IsVisible(51)</visible>
+                    <visible>Control.IsVisible(51)</visible>
 					<visible>Container.OnPrevious</visible>
 					<animation effect="slide" start="0,0" end="0,147" time="150" easing="out" condition="true">Hidden</animation>
 				</control>
@@ -1341,8 +1341,8 @@
 					<width>950</width>
 					<height>60</height>
 					<label>$INFO[ListItem(1).Plot]</label>
-					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
-					<font>mediumLow</font>
+					<autoscroll>false</autoscroll>
+                    <font>mediumLow</font>
 					<include>textBox</include>
 					<visible>Control.IsVisible(51)</visible>
 					<visible>Container.OnPrevious</visible>
@@ -1355,7 +1355,7 @@
 					<width>950</width>
 					<height>60</height>
 					<label>$INFO[ListItem(2).Plot]</label>
-					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+					<autoscroll>false</autoscroll>
 					<font>mediumLow</font>
 					<include>textBox</include>
 					<visible>Control.IsVisible(51)</visible>
@@ -1376,7 +1376,7 @@
 					<width>950</width>
 					<height>60</height>
 					<label>$INFO[ListItem(-1).Plot]</label>
-					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+					<autoscroll>false</autoscroll>
 					<font>mediumLow</font>
 					<include>textBox</include>
 					<visible>Control.IsVisible(51) + !Skin.HasSetting(usecapitalisation)</visible>
@@ -1388,11 +1388,11 @@
 					<width>950</width>
 					<height>60</height>
 					<label>$INFO[ListItem(0).Plot]</label>
-					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+					<autoscroll delay="10000" time="3300" repeat="10000">!Control.HasFocus(13)</autoscroll>
 					<font>mediumLow</font>
 					<textcolor>Focused</textcolor>
 					<include>textBox</include>
-					<visible>Control.IsVisible(51) + !Skin.HasSetting(usecapitalisation)</visible>
+                    <visible>Control.IsVisible(51) + !Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 
                 <control type="textbox" id="4">
@@ -1401,7 +1401,7 @@
 					<width>950</width>
 					<height>60</height>
 					<label>$INFO[ListItem(1).Plot]</label>
-					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+					<autoscroll>false</autoscroll>
 					<font>mediumLow</font>
 					<include>textBox</include>
 					<visible>Control.IsVisible(51) + !Skin.HasSetting(usecapitalisation)</visible>
@@ -1412,8 +1412,8 @@
 					<posy>611</posy>
 					<width>950</width>
 					<height>60</height>
+					<autoscroll>false</autoscroll>
 					<label>$INFO[ListItem(2).Plot]</label>
-					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
 					<font>mediumLow</font>
 					<include>textBox</include>
 					<visible>Control.IsVisible(51) + !Skin.HasSetting(usecapitalisation)</visible>
@@ -1425,9 +1425,9 @@
                     <width>950</width>
                     <height>60</height>
                     <label>$INFO[ListItem(-1).Plot]</label>
-                    <autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
-                    <font>mediumNormal</font>
-                    <include>textBox</include>
+                    <autoscroll>false</autoscroll>
+					<font>mediumNormal</font>
+                    <include>textBoxCaps</include>
                     <visible>Control.IsVisible(51) + Skin.HasSetting(usecapitalisation)</visible>
                 </control>
                 <control type="textbox" id="4">
@@ -1436,10 +1436,10 @@
                     <width>950</width>
                     <height>60</height>
                     <label>$INFO[ListItem(0).Plot]</label>
-                    <autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+                    <autoscroll delay="10000" time="3300" repeat="10000">!Control.HasFocus(13)</autoscroll>
                     <font>mediumNormal</font>
                     <textcolor>Focused</textcolor>
-                    <include>textBox</include>
+                    <include>textBoxCaps</include>
                     <visible>Control.IsVisible(51) + Skin.HasSetting(usecapitalisation)</visible>
                 </control>
                 <control type="textbox" id="4">
@@ -1447,10 +1447,10 @@
                     <posy>464</posy>
                     <width>950</width>
                     <height>60</height>
-                    <label>$INFO[ListItem(1).Plot]</label>
-                    <autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+                    <autoscroll>false</autoscroll>
+					<label>$INFO[ListItem(1).Plot]</label>
                     <font>mediumNormal</font>
-                    <include>textBox</include>
+                    <include>textBoxCaps</include>
                     <visible>Control.IsVisible(51) + Skin.HasSetting(usecapitalisation)</visible>
                 </control>
                 <control type="textbox" id="4">
@@ -1458,10 +1458,10 @@
                     <posy>611</posy>
                     <width>950</width>
                     <height>60</height>
-                    <label>$INFO[ListItem(2).Plot]</label>
-                    <autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+                    <autoscroll>false</autoscroll>
+					<label>$INFO[ListItem(2).Plot]</label>
                     <font>mediumNormal</font>
-                    <include>textBox</include>
+                    <include>textBoxCaps</include>
                     <visible>Control.IsVisible(51) + Skin.HasSetting(usecapitalisation)</visible>
                 </control>
 			</control>
